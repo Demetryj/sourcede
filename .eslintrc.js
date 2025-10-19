@@ -1,48 +1,29 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+  root: true,
+  env: { browser: true, es2021: true, node: true },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:@next/next/recommended",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@next/next/recommended',
+    'plugin:prettier/recommended',
   ],
-    parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 13,
-    sourceType: "module",
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true },
   },
-  plugins: ["react", "unused-imports"],
-  globals: {
-    _: "readonly",
-  },
+  plugins: ['react', 'unused-imports'],
+  settings: { react: { version: 'detect' } },
   rules: {
-    "no-prototype-builtins": 0,
-    "react/no-unknown-property": 0,
-    "@next/next/no-sync-scripts": 0,
-    "@next/next/no-img-element": 0,
-    "no-extra-boolean-cast": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/display-name": 0,
-    "no-useless-escape": 0,
-    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "auto",
-        singleQuote: true,
-      },
+    'no-undef': 'error',
+    'react/jsx-no-undef': 'error',
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    'unused-imports/no-unused-imports': 'warn',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
     ],
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
