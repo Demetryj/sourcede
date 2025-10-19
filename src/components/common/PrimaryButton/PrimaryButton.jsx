@@ -13,6 +13,7 @@ export default function PrimaryButton({
   disabled,
   additionalClass = '',
   withIcon,
+  type = 'submit',
   href,
   ...props
 }) {
@@ -28,7 +29,7 @@ export default function PrimaryButton({
 
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
       onClick={handleClick}
       className={clsx('primary-button', additionalClass && additionalClass)}

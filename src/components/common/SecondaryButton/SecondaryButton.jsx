@@ -14,6 +14,7 @@ export default function SecondaryButton({
   disabled,
   additionalClass = '',
   withIcon,
+  type = 'submit',
   href,
   ...props
 }) {
@@ -34,7 +35,7 @@ export default function SecondaryButton({
 
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
       onClick={handleClick}
       className={clsx('secondary-button', additionalClass && additionalClass)}
