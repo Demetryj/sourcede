@@ -4,3 +4,6 @@ export { default as TertiaryButton } from './TertiaryButton/TertiaryButton';
 export { default as SecondaryButton } from './SecondaryButton/SecondaryButton';
 export { default as PrimaryButton } from './PrimaryButton/PrimaryButton';
 export { default as Accordion } from './Accordion/Accordion';
+export { default as SubscriptionForm } from './SubscriptionForm/SubscriptionForm';
+export { default as InputGeneral } from './InputGeneral/InputGeneral';
+export { default as FAQSection } from './FAQSection/FAQSection';
