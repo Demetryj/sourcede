@@ -1,0 +1,53 @@
+.subscription-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include tablet {
+    gap: 16px;
+  }
+}
+
+.subscription-form__input {
+  display: inline-block;
+  padding: 8px 16px;
+
+  width: 100%;
+  height: 40px;
+
+  color: $primary-text;
+
+  border-radius: 4px;
+  border: 1px solid $gray-30;
+  background-color: $white;
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: $secondary-text;
+  }
+
+  @include tablet {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 48px;
+  }
+}
+
+.subscription-form__submit-btn {
+  width: 100px;
+
+  @include tablet {
+    width: 133px;
+  }
+}
+
+.subscription-form__submit-btn.primary {
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
+  }
+}
