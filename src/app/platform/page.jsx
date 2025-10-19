@@ -1,5 +1,7 @@
 'use client';
 
+import { FAQSection } from '@/components/common';
+
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -7,5 +9,10 @@ export default function Home() {
     document.title = 'Platform';
   });
 
-  return <h1>Platform page</h1>;
+  return (
+    <>
+      <h1>Platform page</h1>
+      <FAQSection />;
+    </>
+  );
 }
