@@ -35,6 +35,7 @@
     opacity 500ms ease;
 
   pointer-events: none;
+  z-index: 900;
 
   &[data-open='true'] {
     transform: translateY(0) scale(1);

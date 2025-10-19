@@ -99,35 +99,37 @@ function MenuWithDropdown({ title, withIcon, items, placement = 'bottom-start' }
 
 export default function HeaderNavMenu() {
   return (
-    <ul className="header-nav-menu">
-      {headerNavMenuData.map(({ id, title, withIcon, href, value }) => {
-        const visibleList =
-          value === 'platform'
-            ? platformPageNavMenuData
-            : value === 'about_us'
-              ? aboutAsPageNavMenuData
-              : null;
+    <nav>
+      <ul className="header-nav-menu">
+        {headerNavMenuData.map(({ id, title, withIcon, href, value }) => {
+          const visibleList =
+            value === 'platform'
+              ? platformPageNavMenuData
+              : value === 'about_us'
+                ? aboutAsPageNavMenuData
+                : null;
 
-        if (visibleList) {
+          if (visibleList) {
+            return (
+              <MenuWithDropdown
+                key={id}
+                title={title}
+                withIcon={withIcon}
+                items={visibleList}
+                placement="bottom-start"
+              />
+            );
+          }
+
           return (
-            <MenuWithDropdown
-              key={id}
-              title={title}
-              withIcon={withIcon}
-              items={visibleList}
-              placement="bottom-start"
-            />
+            <li key={id} className="header-nav-menu__item">
+              <TextButton withIcon={withIcon} href={href}>
+                {title}
+              </TextButton>
+            </li>
           );
-        }
-
-        return (
-          <li key={id} className="header-nav-menu__item">
-            <TextButton withIcon={withIcon} href={href}>
-              {title}
-            </TextButton>
-          </li>
-        );
-      })}
-    </ul>
+        })}
+      </ul>
+    </nav>
   );
 }
