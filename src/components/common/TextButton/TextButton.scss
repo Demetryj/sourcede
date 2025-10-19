@@ -1,0 +1,51 @@
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 8px;
+  width: fit-content;
+  height: 48px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: $primary-text;
+
+  border-radius: 4px;
+
+  transition: $transition;
+
+  &.open {
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $gray-30;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+.text-button__icon {
+  width: 20px;
+  height: 20px;
+
+  color: $gray-100;
+
+  transition: $transition;
+
+  &.rotate {
+    transform: rotate(180deg);
+    transform-origin: 70% 50%;
+  }
+}

@@ -1,0 +1,38 @@
+.tertiary-button {
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 4px;
+  width: fit-content;
+
+  color: $gray-100;
+
+  border-bottom: 1px solid $gray-100;
+  border-radius: 0px;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-100;
+    border-color: $primary-100;
+  }
+
+  &:active {
+    color: $primary-60;
+    border-color: $primary-60;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+.tertiary-button__icon {
+  width: 20px;
+  height: 20px;
+
+  color: inherit;
+}
