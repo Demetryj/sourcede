@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -29,7 +33,7 @@ body {
   font-style: normal;
 
   color: $main-text;
-  background-color: $bg-white;
+  background-color: $gray-10;
 
   outline: none;
 }
@@ -141,9 +145,11 @@ button {
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
-  line-height: inherit;
+  line-height: 1;
+  color: $primary-text;
   background: transparent;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -169,24 +175,25 @@ textarea {
   outline: none;
 }
 
-.container {
+.container-general {
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
 
-  min-width: 590px;
-  max-width: 1920px;
+  min-width: 375px;
+  max-width: 1440px;
   width: 100%;
 
-  @include tablet {
-    padding: 0 32px;
+  &.with-borders {
+    border-right: 1px solid $gray-30;
+    border-left: 1px solid $gray-30;
   }
 
-  @include largeTablet {
-    padding: 0 24px;
+  @include tablet {
+    padding: 0 40px;
   }
 
   @include desktop {
-    padding: 0 16px;
+    padding: 0 160px;
   }
 }
 
