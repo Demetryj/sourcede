@@ -1,0 +1,174 @@
+.footer {
+  background-color: $gray-100;
+}
+
+.footer__top-wrapper {
+  border-bottom: 1px solid $gray-90;
+}
+
+.footer__inner-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  padding: 56px 8px 24px;
+
+  border-right: 1px solid $gray-90;
+  border-left: 1px solid $gray-90;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 72px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include desktop {
+    gap: 160px;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 32px;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.92px;
+
+  color: $white;
+}
+
+.footer__subscribe-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    max-width: 400px;
+  }
+}
+
+.footer__subscribe-text {
+  font-size: 14px;
+  color: $gray-30;
+}
+
+.footer__subscribe-title {
+  color: $gray-10;
+}
+
+//----------------------------------------------------------
+.footer__nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  @include desktop {
+    gap: 70px;
+  }
+}
+
+.footer__nav-title {
+  margin-bottom: 16px;
+  color: $gray-10;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__nav-link {
+  color: $gray-30;
+
+  $transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    color: $white;
+  }
+}
+
+//-------------------------------------------------
+
+.footer__inner-bottom-wrapper {
+  padding: 24px 8px 48px;
+
+  border-right: 1px solid $gray-90;
+  border-left: 1px solid $gray-90;
+
+  @include tablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.footer__description-text {
+  display: inline-block;
+  margin-bottom: 16px;
+  max-width: 560px;
+
+  font-size: 14px;
+  color: $gray-30;
+}
+
+.footer__rights {
+  font-size: 14px;
+  color: $gray-30;
+}
+
+.footer__rights-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__rules-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__rules-item {
+  padding: 0 5px;
+
+  border-bottom: 1px solid $gray-30;
+
+  transition: $transition;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible,
+  &:hover a,
+  &:focus-visible {
+    color: $white;
+    border-bottom-color: $white;
+  }
+}
+
+.footer__rules-link {
+  font-size: 14px;
+  color: $gray-30;
+
+  transition: $transition;
+}
