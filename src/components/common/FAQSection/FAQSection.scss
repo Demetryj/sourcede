@@ -12,7 +12,7 @@
 }
 
 .faq-section__wrapper {
-  @include tablet {
+  @include largeTablet {
     padding-left: 102px;
     padding-right: 102px;
   }

@@ -13,7 +13,7 @@
   border-bottom: 1px solid $gray-30;
   background-color: $gray-10;
 
-  @include tablet {
+  @include largeTablet {
     padding: 16px 0;
     height: 80px;
   }
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 16px;
 
-  @include desktop {
+  @include largeTablet {
     display: flex;
   }
 }
@@ -59,7 +59,7 @@
   width: 32px;
   height: 32px;
 
-  @include desktop {
+  @include largeTablet {
     display: none;
     pointer-events: none;
   }

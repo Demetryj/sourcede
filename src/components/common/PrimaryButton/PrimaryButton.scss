@@ -41,7 +41,7 @@
     pointer-events: none;
   }
 
-  @include tablet {
+  @include largeTablet {
     height: 48px;
   }
 }

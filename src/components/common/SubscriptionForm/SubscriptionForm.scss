@@ -3,7 +3,7 @@
   align-items: center;
   gap: 8px;
 
-  @include tablet {
+  @include largeTablet {
     gap: 16px;
   }
 }
@@ -27,7 +27,7 @@
     color: $secondary-text;
   }
 
-  @include tablet {
+  @include largeTablet {
     padding-top: 12px;
     padding-bottom: 12px;
     height: 48px;

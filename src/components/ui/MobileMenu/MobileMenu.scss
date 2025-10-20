@@ -19,14 +19,7 @@
 
   transition: $transition;
 
-  @include tablet {
-    top: 80px;
-    padding-left: 40px;
-    padding-right: 40px;
-    height: calc(100% - 80px);
-  }
-
-  @include desktop {
+  @include largeTablet {
     display: none;
   }
 }

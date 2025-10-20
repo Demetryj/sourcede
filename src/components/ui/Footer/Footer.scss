@@ -16,7 +16,7 @@
   border-right: 1px solid $gray-90;
   border-left: 1px solid $gray-90;
 
-  @include tablet {
+  @include largeTablet {
     flex-direction: row;
     gap: 72px;
 
@@ -46,7 +46,7 @@
   flex-direction: column;
   gap: 16px;
 
-  @include tablet {
+  @include largeTablet {
     max-width: 400px;
   }
 }

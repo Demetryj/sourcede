@@ -60,7 +60,7 @@ export default function Header() {
         </button>
       </div>
 
-      {screenWidth < 1440 && <MobileMenu isMobileMenuOpen={isMobileMenuOpen} />}
+      {screenWidth < 1024 && <MobileMenu isMobileMenuOpen={isMobileMenuOpen} />}
     </header>
   );
 }
