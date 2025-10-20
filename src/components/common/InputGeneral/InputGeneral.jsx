@@ -1,13 +1,20 @@
+'use client';
+
+import clsx from 'clsx';
+
 import './InputGeneral.scss';
 
 export default function InputGeneral({
-  label = 'Some label *',
+  label,
   type = 'text',
   name,
   placeholder = '',
   disabled,
+  errors,
   ...props
 }) {
+  const hasError = errors[name]?.message;
+
   return (
     <div className="input-general">
       {label && (
@@ -23,9 +30,11 @@ export default function InputGeneral({
         placeholder={placeholder}
         autoComplete="off"
         disabled={disabled}
-        className="input-general__field"
+        className={clsx('input-general__field', hasError && 'error')}
         {...props}
       />
+
+      {hasError && <span className="input-general__error-message">{errors[name]?.message}</span>}
     </div>
   );
 }
