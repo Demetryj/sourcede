@@ -1,0 +1,31 @@
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  flex: 1;
+
+  @include desktop {
+    row-gap: 20px;
+  }
+}
+
+.contact-us-form__inputs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include largeTablet {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 20px;
+  }
+
+  @include desktop {
+    row-gap: 20px;
+  }
+}
+
+.contact-us-form__submit-btn {
+  width: 133px;
+}
