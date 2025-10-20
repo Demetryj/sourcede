@@ -7,3 +7,5 @@ export { default as Accordion } from './Accordion/Accordion';
 export { default as SubscriptionForm } from './SubscriptionForm/SubscriptionForm';
 export { default as InputGeneral } from './InputGeneral/InputGeneral';
 export { default as FAQSection } from './FAQSection/FAQSection';
+export { default as TextareaGeneral } from './TextareaGeneral/TextareaGeneral';
+export { default as DropdownInputForm } from './DropdownInputForm/DropdownInputForm';
