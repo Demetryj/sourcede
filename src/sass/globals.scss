@@ -67,7 +67,7 @@ h1 {
   font-size: 32px;
   font-weight: 700;
 
-  @include largeTablet {
+  @include tablet {
     font-size: 56px;
   }
 
@@ -80,7 +80,7 @@ h2 {
   font-size: 30px;
   font-weight: 600;
 
-  @include largeTablet {
+  @include tablet {
     font-size: 48px;
   }
 
@@ -93,7 +93,7 @@ h3 {
   font-size: 28px;
   font-weight: 600;
 
-  @include largeTablet {
+  @include tablet {
     font-size: 36px;
   }
 
@@ -124,7 +124,7 @@ h6 {
   font-size: 18px;
   font-weight: 500;
 
-  @include largeTablet {
+  @include tablet {
     font-size: 20px;
   }
 }
@@ -177,6 +177,9 @@ textarea {
 }
 
 .section-general {
+  position: relative;
+  z-index: 100;
+
   padding: 40px 0 24px;
   background-color: $white;
 
@@ -186,6 +189,9 @@ textarea {
 }
 
 .container-general {
+  position: relative;
+  z-index: 100;
+
   margin: 0 auto;
   padding: 0 16px;
 
@@ -203,6 +209,9 @@ textarea {
 }
 
 .inner-container {
+  position: relative;
+  z-index: 100;
+
   padding-top: 40px;
   padding-bottom: 24px;
 
