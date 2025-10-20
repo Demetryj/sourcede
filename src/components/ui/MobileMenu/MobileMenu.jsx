@@ -13,7 +13,7 @@ import {
 
 import './MobileMenu.scss';
 
-export default function MobileMenu({ isMobileMenuOpen }) {
+export default function MobileMenu({ isMobileMenuOpen, closeMobileMenu }) {
   return (
     <div className={clsx('mobile-menu', isMobileMenuOpen && 'menu-open')}>
       <ul className="mobile-menu__nav-list">
@@ -28,7 +28,7 @@ export default function MobileMenu({ isMobileMenuOpen }) {
                   <ul className="mobile-menu__sub-nav-list">
                     {visibleList.map(({ title, description, pathname, hash }, index) => {
                       return (
-                        <li key={index}>
+                        <li key={index} onClick={closeMobileMenu}>
                           <Link href={{ pathname, hash }} className="mobile-menu__accordion-link">
                             <h6>{title}</h6>
                             <p>{description}</p>
@@ -43,7 +43,7 @@ export default function MobileMenu({ isMobileMenuOpen }) {
           }
 
           return (
-            <li key={id}>
+            <li key={id} onClick={closeMobileMenu}>
               <Link href={href} className="mobile-menu__link">
                 <h6>{title}</h6>
               </Link>
