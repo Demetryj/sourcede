@@ -35,10 +35,14 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  const closeMobileMenu = () => {
+    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className={clsx('container-general', 'header__container')}>
-        <Link href="/" className="header__logo">
+        <Link href="/" className="header__logo" onClick={closeMobileMenu}>
           SureCede
         </Link>
 
@@ -60,7 +64,9 @@ export default function Header() {
         </button>
       </div>
 
-      {screenWidth < 1024 && <MobileMenu isMobileMenuOpen={isMobileMenuOpen} />}
+      {screenWidth < 1024 && (
+        <MobileMenu isMobileMenuOpen={isMobileMenuOpen} closeMobileMenu={closeMobileMenu} />
+      )}
     </header>
   );
 }
