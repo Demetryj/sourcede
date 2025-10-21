@@ -1,3 +1,22 @@
+.faq-section__wrapper {
+  @include largeTablet {
+    padding-left: 102px;
+    padding-right: 102px;
+  }
+
+  @include desktop {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+}
+
+.faq-section__title-wrapper {
+  @include onlyMobile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .faq-section__title {
   margin-bottom: 24px;
   text-align: center;
@@ -8,18 +27,6 @@
 
   @include desktop {
     margin-bottom: 48px;
-  }
-}
-
-.faq-section__wrapper {
-  @include largeTablet {
-    padding-left: 102px;
-    padding-right: 102px;
-  }
-
-  @include desktop {
-    padding-left: 190px;
-    padding-right: 190px;
   }
 }
 

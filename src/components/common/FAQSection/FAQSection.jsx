@@ -9,7 +9,9 @@ export default function FAQSection() {
     <section className="faq-section">
       <div className="container-general">
         <div className="inner-container-with-borders inner-container faq-section__wrapper">
-          <h3 className="faq-section__title">Frequently Asked Questions</h3>
+          <div className="faq-section__title-wrapper">
+            <h3 className="faq-section__title">Frequently Asked Questions</h3>
+          </div>
 
           <ul>
             {faqData.map(({ title, body }, index) => {
