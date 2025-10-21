@@ -1,0 +1,90 @@
+.section-common {
+  position: relative;
+}
+
+.section-common__bg-gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 966px;
+  height: 600px;
+
+  background-image: url('/icons/bg-hero-svg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    top: 0;
+    left: 0;
+    inset: 0;
+  }
+}
+
+.section-common__bg-image {
+  position: relative;
+  width: 100%;
+
+  background: none;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    height: 540px;
+
+    border-top: 1px solid $gray-30;
+    border-bottom: 1px solid $gray-30;
+
+    background-image: var(--bg-url);
+  }
+}
+
+.section-common__card {
+  padding: 24px 8px;
+  width: 100%;
+
+  border-radius: 8px;
+  background-color: $white;
+
+  overflow: hidden;
+
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    padding: 24px;
+    width: 532px;
+
+    border: 1px solid $gray-30;
+  }
+
+  @include largeTablet {
+    right: 24px;
+  }
+}
+
+.section-common__title {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  @include largeTablet {
+    margin-bottom: 24px;
+  }
+}
+
+.section-common__subtitle {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include largeTablet {
+    margin-bottom: 32px;
+  }
+}
