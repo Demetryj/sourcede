@@ -16,33 +16,33 @@ export const platformPageNavMenuData = [
     title: 'Key Benefits',
     description: 'Understand how the platform creates value for both cedents and reinsurers.',
     pathname: '/platform',
-    hash: '',
+    hash: '#benefits',
   },
   {
     title: 'Platform Features',
     description:
       'Discover the tools that make reinsurance faster, smarter, and more collaborative.',
     pathname: '/platform',
-    hash: '',
+    hash: '#features',
   },
   {
     title: 'How It Works',
     description:
       'See how the platform streamlines the reinsurance workflow for both cedents and reinsurers.',
     pathname: '/platform',
-    hash: '',
+    hash: '#how-it-works',
   },
   {
     title: 'Solutions ',
     description: 'See how the platform addresses the industry’s biggest challenges.',
     pathname: '/platform',
-    hash: '',
+    hash: '#solutions',
   },
   {
     title: 'Performance Metrics',
     description: 'See how the platform delivers measurable impact across the MENA market.',
     pathname: '/platform',
-    hash: '',
+    hash: '#metrics',
   },
 ];
 
