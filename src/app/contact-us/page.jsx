@@ -1,7 +1,13 @@
-export const metadata = {
-  title: 'Contact us',
-};
+'use client';
+
+import { useEffect } from 'react';
+
+import { ContactUsPage } from '@/views';
 
 export default function MarketInsights() {
-  return <h3>Contact us Page</h3>;
+  useEffect(() => {
+    document.title = 'Contact us';
+  }, []);
+
+  return <ContactUsPage />;
 }
