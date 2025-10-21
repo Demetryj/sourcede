@@ -20,6 +20,7 @@ export default function ContactUsPage() {
         }
         subtitle="Join industry professionals streamlining reinsurance placement, accessing capacity, and gaining market transparency."
         bgImage={'/images/contact-us-bg.webp'}
+        withButton
       />
 
       <section className="cup__form-section">
