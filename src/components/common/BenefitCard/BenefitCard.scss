@@ -1,0 +1,48 @@
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+
+  padding: 24px;
+  width: 100%;
+  min-height: 214px;
+
+  background-color: $white;
+
+  & h5 {
+    color: $main-text;
+  }
+
+  @include tablet {
+    height: 214px;
+  }
+
+  @include largeTablet {
+    height: 242px;
+  }
+}
+
+.benefit-card__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  & svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.benefit-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefit-card__text {
+  color: $secondary-text;
+}

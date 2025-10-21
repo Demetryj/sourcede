@@ -1,0 +1,37 @@
+.benefit-card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border-top: 1px solid $gray-30;
+  border-bottom: 1px solid $gray-30;
+}
+
+.benefit-card-list > li:not(:last-child) {
+  border-bottom: 1px solid $gray-30;
+}
+
+@include largeTablet {
+  .benefit-card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefit-card-list > li:nth-child(n) {
+    border-right: 1px solid $gray-30;
+  }
+
+  .benefit-card-list > li:nth-child(11) {
+    border-bottom: none;
+  }
+}
+
+@include desktop {
+  .benefit-card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .benefit-card-list > li:nth-child(10) {
+    border-bottom: none;
+  }
+  .benefit-card-list > li:nth-child(3n) {
+    border-right: none;
+  }
+}
