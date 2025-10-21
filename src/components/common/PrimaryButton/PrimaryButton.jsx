@@ -13,13 +13,18 @@ export default function PrimaryButton({
   disabled,
   additionalClass = '',
   withIcon,
-  type = 'submit',
+  type = 'button',
   href,
   ...props
 }) {
   if (href) {
     return (
-      <Link href={href} className={clsx('primary-button', additionalClass && additionalClass)}>
+      <Link
+        href={href}
+        className={clsx('primary-button', additionalClass && additionalClass)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
 
         {withIcon && <ArrowRight className="primary-button__icon" />}

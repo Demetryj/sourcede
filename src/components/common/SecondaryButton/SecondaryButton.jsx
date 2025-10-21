@@ -14,7 +14,7 @@ export default function SecondaryButton({
   disabled,
   additionalClass = '',
   withIcon,
-  type = 'submit',
+  type = 'button',
   href,
   ...props
 }) {

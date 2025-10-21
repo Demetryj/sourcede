@@ -9,3 +9,5 @@ export { default as InputGeneral } from './InputGeneral/InputGeneral';
 export { default as FAQSection } from './FAQSection/FAQSection';
 export { default as TextareaGeneral } from './TextareaGeneral/TextareaGeneral';
 export { default as DropdownInputForm } from './DropdownInputForm/DropdownInputForm';
+export { default as SectionCommon } from './SectionCommon/SectionCommon';
+export { default as BookDemoButton } from './BookDemoButton/BookDemoButton';
