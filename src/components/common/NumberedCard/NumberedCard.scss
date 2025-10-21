@@ -6,6 +6,12 @@
   padding: 24px;
   width: 100%;
   height: 236px;
+
+  background-color: $white;
+
+  & h6 {
+    color: $main-text;
+  }
 }
 
 .numbered-card__number {
