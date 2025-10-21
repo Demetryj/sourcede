@@ -1,19 +1,18 @@
-.cup__inner-container {
+.cup__form-section__inner-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
 
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 24px 8px;
 
   @include tablet {
     flex-direction: row;
     gap: 24px;
+    padding: 24px;
   }
 
   @include largeTablet {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 56px 24px;
   }
 }
 
