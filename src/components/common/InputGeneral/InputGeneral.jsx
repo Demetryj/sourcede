@@ -13,7 +13,7 @@ export default function InputGeneral({
   errors,
   ...props
 }) {
-  const hasError = errors[name]?.message;
+  const hasError = errors && errors[name]?.message;
 
   return (
     <div className="input-general">
