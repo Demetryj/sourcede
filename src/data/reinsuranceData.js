@@ -74,6 +74,6 @@ export const reinsuranceListReinsurerData = [
       </>
     ),
     image: '/images/step-reinsurer-03.png',
-    imageTablet: '/images/step-cedant-03-tablet.png',
+    imageTablet: '/images/step-reinsurer-03-tablet.png',
   },
 ];

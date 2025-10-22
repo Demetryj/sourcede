@@ -1,0 +1,137 @@
+.plarform-page__section__inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tablet {
+    gap: 32px;
+  }
+
+  @include largeTablet {
+    gap: 48px;
+  }
+}
+
+.plarform-page__section__title-wrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include tablet {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  @include largeTablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.plarform-page__solutions-section__inner-container {
+  @include onlyMobile {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  @include tablet {
+    position: relative;
+    width: 100%;
+    height: 540px;
+
+    background-image: url('/images/platform-page-solutions-section-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-top: 1px solid $gray-30;
+    border-bottom: 1px solid $gray-30;
+  }
+}
+
+.plarform-page__solutions-section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 24px 8px;
+  width: 100%;
+
+  border: 1px solid $gray-30;
+  border-radius: 8px;
+
+  background-color: $white;
+
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+
+    padding: 24px;
+    width: 532px;
+  }
+
+  @include largeTablet {
+    right: 24px;
+  }
+
+  @include desktop {
+    gap: 24px;
+  }
+}
+
+.plarform-page__solutions-section__card__list {
+  padding-left: 24px;
+  list-style: disc !important;
+}
+
+.plarform-page__bottom-section__inner-container {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid $gray-30;
+  border-bottom: 1px solid $gray-30;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.plarform-page__bottom-section__content {
+  padding: 24px;
+
+  & .title {
+    margin-bottom: 16px;
+  }
+
+  & .text {
+    color: $secondary-text;
+    margin-bottom: 24px;
+
+    @include largeTablet {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.plarform-page__bottom-section__content.first {
+  border-bottom: 1px solid $gray-30;
+
+  background-color: $secondary-100;
+
+  @include tablet {
+    border-right: 1px solid $gray-30;
+    border-bottom: none;
+
+    & .br {
+      display: none;
+    }
+
+    @include largeTablet {
+      & .br {
+        display: block;
+      }
+    }
+  }
+}

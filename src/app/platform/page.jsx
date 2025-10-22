@@ -1,18 +1,13 @@
 'use client';
 
-import { FAQSection } from '@/components/common';
-
 import { useEffect } from 'react';
+
+import { PlatformPage } from '@/views';
 
 export default function Home() {
   useEffect(() => {
     document.title = 'Platform';
   });
 
-  return (
-    <>
-      <h1>Platform page</h1>
-      <FAQSection />;
-    </>
-  );
+  return <PlatformPage />;
 }
