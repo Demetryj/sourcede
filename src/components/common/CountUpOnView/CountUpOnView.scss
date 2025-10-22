@@ -1,0 +1,15 @@
+.coutn-up-on-view {
+  font-family: var(--font-roobert);
+  line-height: 1.2;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  @include tablet {
+    font-size: 48px;
+  }
+
+  @include desktop {
+    font-size: 56px;
+  }
+}

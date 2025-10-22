@@ -1,0 +1,182 @@
+.scis__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+  padding: 0 8px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include largeTablet {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+
+    & h3,
+    & p {
+      width: 47%;
+    }
+  }
+}
+
+.scis__card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border-top: 1px solid $gray-30;
+  border-bottom: 1px solid $gray-30;
+
+  & li:not(:last-child) {
+    border-bottom: 1px solid $gray-30;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+
+    & li:nth-child(2n-1) {
+      border-right: 1px solid $gray-30;
+    }
+
+    & li:nth-child(3) {
+      border-bottom: none;
+    }
+  }
+
+  @include largeTablet {
+    grid-template-columns: repeat(4, 1fr);
+
+    & li:nth-child(n) {
+      border-bottom: none;
+    }
+
+    & li:not(:last-child) {
+      border-right: 1px solid $gray-30;
+    }
+  }
+}
+
+.scis__card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 32px;
+  height: 268px;
+
+  background-color: $white;
+}
+
+.snake-card {
+  --bw: 0.5px;
+  --speed: 10s;
+  --seg: 50; /* visible segment in % of perimeter (0..100) */
+
+  position: relative;
+  display: inline-block;
+  border-radius: 0;
+  width: 100%;
+  color: $primary-100;
+}
+
+.snake-card__content {
+  position: relative;
+  z-index: 1;
+  background: $white;
+  border-radius: 0;
+  padding: 32px;
+  width: 100%;
+  height: 268px;
+}
+
+.snake-card__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  pointer-events: none;
+}
+
+.snake-base {
+  fill: none;
+  // stroke: $gray-30;
+  stroke-width: var(--bw);
+  vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
+}
+
+.snake-run {
+  fill: none;
+  stroke: url(#snakeGrad);
+  stroke-width: var(--bw);
+  stroke-linecap: round;
+  // vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
+
+  stroke-dasharray: var(--segPx) calc(var(--Lpx) - var(--segPx));
+  animation: snake-dash var(--speed) linear infinite;
+}
+
+@keyframes snake-dash {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: calc(-1 * var(--Lpx));
+  }
+}
+
+// .snake-card__content {
+//   height: 268px;
+//   width: 100%;
+//   position: relative;
+
+//   overflow: hidden;
+//   background-color: $gray-30;
+// }
+
+// .snake-card__content::before {
+//   content: '';
+
+//   width: 150%;
+//   // aspect-ratio: 1/1;
+//   height: 150%;
+//   position: absolute;
+//   top: -25%;
+//   left: -25%;
+//   // transform: translate(-50%, -50%);
+//   animation: rotate 3s infinite linear;
+
+//   //   background-image: conic-gradient(#04b0ee 20deg, transparent 120deg);
+//   background-image: conic-gradient(from 0deg at center, #1aa47b, #e4ffce, #3ce661, #1aa47b00);
+// }
+
+// @keyframes rotate {
+//   100% {
+//     transform: rotate(-360deg);
+//     transform-origin: 50% 50%;
+//   }
+// }
+// .snake-card__content::after {
+//   content: '';
+//   height: 99%;
+//   width: 99%;
+//   position: absolute;
+//   // background-color: #1c1b1b29;
+//   background-color: $white;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   //   color: #04b0ee;
+// }
