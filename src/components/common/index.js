@@ -18,3 +18,4 @@ export { default as BenefitCard } from './BenefitCard/BenefitCard';
 export { default as BenefitCardList } from './BenefitCardList/BenefitCardList';
 export { default as StreamlinedReinsuranceSection } from './StreamlinedReinsuranceSection/StreamlinedReinsuranceSection';
 export { default as SureCedeImpactSection } from './SureCedeImpactSection/SureCedeImpactSection';
+export { default as CountUpOnView } from './CountUpOnView/CountUpOnView';
