@@ -221,6 +221,19 @@ textarea {
   }
 }
 
+.inner-container-bottom {
+  position: relative;
+  z-index: 100;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include largeTablet {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+
 .inner-container-with-borders {
   border-right: 1px solid $gray-30;
   border-left: 1px solid $gray-30;
