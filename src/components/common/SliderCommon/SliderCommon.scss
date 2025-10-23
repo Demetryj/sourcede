@@ -1,0 +1,39 @@
+.slider-common {
+  position: relative;
+  width: 100%;
+}
+
+.slider-common .swiper {
+  overflow: hidden;
+}
+
+.slider-common__nav-wrapper {
+  margin: 0 auto;
+  padding-top: 24px;
+
+  max-width: 1440px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  min-width: 375px;
+  max-width: 1440px;
+  width: 100%;
+
+  @include largeTablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include desktop {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+
+.slider-common__nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-left: auto;
+}
