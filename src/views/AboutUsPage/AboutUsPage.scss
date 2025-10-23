@@ -1,0 +1,137 @@
+.about-us__mission-section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include largeTablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+  }
+}
+
+.about-us__mission-section__header__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include desktop {
+    max-width: 50%;
+  }
+}
+
+.about-us__team-section {
+  background-color: $white;
+}
+
+//------ team section
+
+.about-us__team-section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+
+    & p {
+      display: inline-block;
+      max-width: 50%;
+    }
+  }
+}
+
+//----- advantages-section
+.about-us__advantages-section__title {
+  padding: 0 8px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include largeTablet {
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
+}
+
+.about-us__advantages-section__card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border-top: 1px solid $gray-30;
+  border-bottom: 1px solid $gray-30;
+
+  @include largeTablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    & li:nth-child(5) {
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    & li:nth-child(5) {
+      grid-column: 2 / -1;
+      grid-row: 2;
+    }
+  }
+}
+
+.about-us__advantages-section__card-list {
+  & li:not(:last-child) {
+    border-bottom: 1px solid $gray-30;
+  }
+
+  @include largeTablet {
+    & li:nth-child(5) {
+      border-bottom: none;
+    }
+
+    & li:nth-child(1),
+    & li:nth-child(3) {
+      border-right: 1px solid $gray-30;
+    }
+  }
+
+  @include desktop {
+    & li:nth-child(4) {
+      border-bottom: none;
+    }
+
+    & li:nth-child(2),
+    & li:nth-child(4) {
+      border-right: 1px solid $gray-30;
+    }
+  }
+}
