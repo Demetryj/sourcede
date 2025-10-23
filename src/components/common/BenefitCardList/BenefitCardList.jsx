@@ -1,5 +1,3 @@
-import clsx from 'clsx';
-
 import { BenefitCard } from '@/components/common';
 
 import './BenefitCardList.scss';
@@ -9,7 +7,7 @@ export default function BenefitCardList({ cardListData }) {
     <ul className="benefit-card-list">
       {cardListData.map((card, index) => {
         return (
-          <li key={index} className={clsx(card.isLastCard && 'last-card')}>
+          <li key={index}>
             <BenefitCard cardData={card} />
           </li>
         );
