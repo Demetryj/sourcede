@@ -9,3 +9,7 @@ export { default as Coverage } from './Coverage';
 export { default as Chat } from './Chat';
 export { default as AIScan } from './AIScan';
 export { default as Innovation } from './Innovation';
+export { default as Vision } from './Vision';
+export { default as Security } from './Security';
+export { default as Experts } from './Experts';
+export { default as Region } from './Region';
