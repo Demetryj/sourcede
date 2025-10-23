@@ -20,7 +20,12 @@ export default function SecondaryButton({
 }) {
   if (href) {
     return (
-      <Link href={href} className={clsx('secondary-button', additionalClass && additionalClass)}>
+      <Link
+        href={href}
+        className={clsx('secondary-button', additionalClass && additionalClass)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
 
         {withIcon &&
