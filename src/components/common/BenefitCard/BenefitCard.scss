@@ -1,12 +1,12 @@
 .benefit-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   gap: 32px;
 
   padding: 24px;
   width: 100%;
-  min-height: 214px;
+  height: 100%;
 
   background-color: $white;
 
@@ -14,12 +14,8 @@
     color: $main-text;
   }
 
-  @include tablet {
-    height: 214px;
-  }
-
-  @include largeTablet {
-    height: 242px;
+  &.animated-card {
+    justify-content: space-between;
   }
 }
 
@@ -28,8 +24,12 @@
   align-items: center;
   justify-content: center;
 
+  min-height: 48px;
   width: 48px;
   height: 48px;
+
+  border-radius: 4px;
+  border: 1px solid $gray-30;
 
   & svg {
     width: 32px;
