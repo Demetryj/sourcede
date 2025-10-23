@@ -111,7 +111,7 @@ export const benefitCardListData = [
     text: 'Seamlessly integrate with enterprise systems for smooth data exchange, scalability, and readiness.',
   },
   {
-    isLastCard: true,
+    isAnimatedCard: true,
     title: 'Close deals up to XX% faster than traditional workflows.',
   },
 ];
