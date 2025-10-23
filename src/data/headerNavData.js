@@ -52,27 +52,27 @@ export const aboutAsPageNavMenuData = [
     description:
       'Understand the challenges shaping the market today and why a smarter solution is needed.',
     pathname: '/about-us',
-    hash: '',
+    hash: '#hero',
   },
   {
     title: 'Our Mission & Valuess',
     description:
       'Learn how our mission & values drive innovation and creates lasting impact in the reinsurance industry.',
     pathname: '/about-us',
-    hash: '',
+    hash: '#mission',
   },
   {
     title: 'Meet The Team',
     description:
       'Get to know the people behind the platform and the expertise driving our success.',
     pathname: '/about-us',
-    hash: '',
+    hash: '#team',
   },
   {
     title: 'Why Surecede ',
     description:
       'See what sets us apart and why industry leaders trust us as their partner of choice.',
     pathname: '/about-us',
-    hash: '',
+    hash: '#advantages',
   },
 ];
