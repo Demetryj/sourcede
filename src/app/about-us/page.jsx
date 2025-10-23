@@ -1,7 +1,13 @@
-export const metadata = {
-  title: 'About us',
-};
+'use client';
+
+import { useEffect } from 'react';
+
+import { AboutUsPage } from '@/views';
 
 export default function AboutUs() {
-  return <h3>About us Page</h3>;
+  useEffect(() => {
+    document.title = 'About us';
+  });
+
+  return <AboutUsPage />;
 }
