@@ -35,6 +35,12 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (isMobileMenuOpen && screenWidth >= 1024) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [screenWidth]);
+
   const closeMobileMenu = () => {
     if (isMobileMenuOpen) setIsMobileMenuOpen(false);
   };
