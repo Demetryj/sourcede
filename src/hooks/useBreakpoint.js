@@ -4,13 +4,10 @@ import { useState, useEffect } from 'react';
 
 export function useBreakpoint() {
   const [breakpoints, setBreakpoints] = useState({
-    isMobileS: false,
-    isMobileM: false,
+    isMobile: false,
     isTablet: false,
     isLaptop: false,
     isDesktop: false,
-    isWide: false,
-    isUltra: false,
     screenWidth: 0,
   });
 
@@ -19,8 +16,9 @@ export function useBreakpoint() {
       const width = window.innerWidth;
 
       setBreakpoints({
-        isMobile: width <= 375,
-        isTablet: width <= 768,
+        isMobile: width < 768,
+        isTablet: width < 1024,
+        isLaptop: width < 1440,
         isDesktop: width >= 1440,
         screenWidth: width,
       });
