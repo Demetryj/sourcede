@@ -1,10 +1,12 @@
+import clsx from 'clsx';
+
 import { BenefitCard } from '@/components/common';
 
 import './BenefitCardList.scss';
 
-export default function BenefitCardList({ cardListData }) {
+export default function BenefitCardList({ cardListData, additionalClass }) {
   return (
-    <ul className="benefit-card-list">
+    <ul className={clsx('benefit-card-list', additionalClass)}>
       {cardListData.map((card, index) => {
         return (
           <li key={index}>
