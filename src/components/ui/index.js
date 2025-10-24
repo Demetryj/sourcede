@@ -4,3 +4,5 @@ export { default as MobileMenu } from './MobileMenu/MobileMenu';
 export { default as Footer } from './Footer/Footer';
 export { default as ContactUsForm } from './ContactUsForm/ContactUsForm';
 export { default as TeamCard } from './TeamCard/TeamCard';
+export { default as CoverageCard } from './CoverageCard/CoverageCard';
+export { default as ResultsCard } from './ResultsCard/ResultsCard';

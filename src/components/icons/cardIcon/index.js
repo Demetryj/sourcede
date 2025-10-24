@@ -13,3 +13,6 @@ export { default as Vision } from './Vision';
 export { default as Security } from './Security';
 export { default as Experts } from './Experts';
 export { default as Region } from './Region';
+export { default as Terms } from './Terms';
+export { default as Money } from './Money';
+export { default as Distribution } from './Distribution';
