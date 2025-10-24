@@ -133,5 +133,9 @@
     & li:nth-child(4) {
       border-right: 1px solid $gray-30;
     }
+
+    & li:nth-child(5) .benefit-card {
+      justify-content: flex-start;
+    }
   }
 }
