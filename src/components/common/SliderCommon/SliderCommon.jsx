@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import clsx from 'clsx';
 
 import { IconButton } from '@/components/common';
 
@@ -12,7 +13,15 @@ import { ChevronRightSecond, ChevronLeftSecond } from '@/components/icons';
 
 import './SliderCommon.scss';
 
-export default function SliderCommon({ cardComponent: Card, dataList, width = '326px' }) {
+export default function SliderCommon({
+  cardComponent: Card,
+  dataList,
+  width = '326px',
+  spaceBetween = 20,
+  isNeedPeek,
+  peek,
+  additionalClass,
+}) {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -26,15 +35,22 @@ export default function SliderCommon({ cardComponent: Card, dataList, width = '3
     swiper.navigation.init();
     swiper.navigation.update();
   }, []);
+
+  useEffect(() => {
+    if (!isNeedPeek) return;
+  }, [isNeedPeek]);
+
   return (
-    <div className="slider-common">
+    <div className={clsx('slider-common', additionalClass && additionalClass)}>
       <Swiper
         modules={[Navigation, A11y, Keyboard]}
         onSwiper={swiper => (swiperRef.current = swiper)}
         loop={true}
         slidesPerView="auto"
-        spaceBetween={20}
+        spaceBetween={spaceBetween}
         speed={450}
+        slidesOffsetBefore={peek ? -peek : 0}
+        slidesOffsetAfter={peek ? peek : 0}
         keyboard={{ enabled: true }}
         onBeforeInit={swiper => {
           swiper.params.navigation.prevEl = prevRef.current;
