@@ -14,6 +14,8 @@
 
   transition: $transition;
 
+  user-select: none;
+
   &:hover,
   &:focus-visible {
     background-color: $gray-20;
@@ -27,6 +29,10 @@
     cursor: auto;
     opacity: 0.5;
     pointer-events: none;
+
+    & svg {
+      opacity: 0.5;
+    }
   }
 }
 

@@ -11,6 +11,8 @@
   border-radius: 8px;
   border: 1px solid $gray-30;
 
+  user-select: none;
+
   @include tablet {
     flex-direction: row;
     gap: 24px;

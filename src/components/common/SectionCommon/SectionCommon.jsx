@@ -4,7 +4,7 @@ import { BookDemoButton } from '@/components/common';
 
 import './SectionCommon.scss';
 
-export default function SectionCommon({ bgImage, title, subtitle, withButton, hash }) {
+export default function SectionCommon({ bgImage, title, subtitle, withButton, hash, children }) {
   return (
     <section id={hash ? hash : undefined} className="section-common">
       <div className="section-common__bg-gradient" />
@@ -17,6 +17,8 @@ export default function SectionCommon({ bgImage, title, subtitle, withButton, ha
               <p className="section-common__subtitle">{subtitle}</p>
 
               {withButton && <BookDemoButton />}
+
+              {children && children}
             </div>
           </div>
         </div>
