@@ -30,7 +30,12 @@ const solutionsItems = [
 ];
 
 export default function PlatformPage() {
-  const [selectedTabId, setSelectedTabId] = useState(1);
+  const [selectedTab, setSelectedTab] = useState(tabList[0]);
+
+  const handleSelectTab = id => {
+    const selectedItem = tabList.find(item => item.id === id);
+    setSelectedTab(selectedItem);
+  };
 
   return (
     <>
@@ -50,14 +55,10 @@ export default function PlatformPage() {
               </h3>
             </div>
 
-            <Tabs
-              tabList={tabList}
-              selectedTabId={selectedTabId}
-              handleSelectTab={setSelectedTabId}
-            />
+            <Tabs tabList={tabList} selectedTab={selectedTab} handleSelectTab={handleSelectTab} />
 
             <NumberedCardList
-              cardListData={selectedTabId === 1 ? cardListCedantData : cardListReinsurerData}
+              cardListData={selectedTab?.id === 1 ? cardListCedantData : cardListReinsurerData}
             />
           </div>
         </div>

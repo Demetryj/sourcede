@@ -13,12 +13,17 @@ import { reinsuranceListCedantData, reinsuranceListReinsurerData } from '@/data/
 import './StreamlinedReinsuranceSection.scss';
 
 export default function StreamlinedReinsuranceSection({ hash }) {
-  const [selectedTabId, setSelectedTabId] = useState(1);
+  const [selectedTab, setSelectedTab] = useState(tabList[0]);
 
   const { screenWidth } = useBreakpoint();
 
   const currentList =
-    selectedTabId === 1 ? reinsuranceListCedantData : reinsuranceListReinsurerData;
+    selectedTab?.id === 1 ? reinsuranceListCedantData : reinsuranceListReinsurerData;
+
+  const handleSelectTab = id => {
+    const selectedItem = tabList.find(item => item.id === id);
+    setSelectedTab(selectedItem);
+  };
 
   return (
     <section id={hash ? hash : undefined} className="srs-section">
@@ -28,11 +33,7 @@ export default function StreamlinedReinsuranceSection({ hash }) {
             <h3>Streamlined Reinsurance in 3 Steps</h3>
           </div>
 
-          <Tabs
-            tabList={tabList}
-            selectedTabId={selectedTabId}
-            handleSelectTab={setSelectedTabId}
-          />
+          <Tabs tabList={tabList} selectedTab={selectedTab} handleSelectTab={handleSelectTab} />
 
           <ul className="srs-section__card-list">
             {currentList.map(({ id, number, title, text, image, imageTablet }) => {
