@@ -1,0 +1,49 @@
+.market-insights-page__section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tablet {
+    gap: 32px;
+  }
+
+  @include desktop {
+    gap: 48px;
+  }
+}
+
+.market-insights-page__tabs-wrapper {
+  padding-left: 16px;
+
+  min-width: 375px;
+  max-width: 1440px;
+  width: 100%;
+
+  @include largeTablet {
+    padding: 0 40px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    padding: 0 160px;
+  }
+}
+
+.market-insights-page__tabs {
+  margin: 0;
+}
+
+.market-insights-page__card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include largeTablet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
