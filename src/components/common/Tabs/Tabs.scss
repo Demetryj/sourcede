@@ -2,6 +2,7 @@
   margin: 0 auto;
 
   max-width: 100%;
+  width: fit-content;
   height: 40px;
 
   border-radius: 4px;
@@ -9,6 +10,7 @@
   background-color: $gray-20;
 
   overflow: auto;
+  scrollbar-width: none;
 }
 
 .tabs__list {
@@ -24,7 +26,7 @@
   justify-content: center;
 
   padding: 4px 16px;
-  width: 144px;
+  min-width: 144px;
   height: 30px;
 
   border: 1px solid transparent;
@@ -32,9 +34,10 @@
 
   cursor: pointer;
 
-  transition: $transition;
+  transition: background-color 250ms;
 
   & h6 {
+    white-space: nowrap;
     color: $gray-text;
     transition: $transition;
   }
