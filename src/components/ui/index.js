@@ -6,3 +6,4 @@ export { default as ContactUsForm } from './ContactUsForm/ContactUsForm';
 export { default as TeamCard } from './TeamCard/TeamCard';
 export { default as CoverageCard } from './CoverageCard/CoverageCard';
 export { default as ResultsCard } from './ResultsCard/ResultsCard';
+export { default as MarketInsightsCard } from './MarketInsightsCard/MarketInsightsCard';
