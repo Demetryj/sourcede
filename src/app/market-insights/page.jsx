@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { MarketInsightsPage } from '@/views';
 
 export const metadata = {
@@ -5,5 +7,9 @@ export const metadata = {
 };
 
 export default function MarketInsights() {
-  return <MarketInsightsPage />;
+  return (
+    <Suspense fallback={null}>
+      <MarketInsightsPage />
+    </Suspense>
+  );
 }
