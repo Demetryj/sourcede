@@ -1,0 +1,67 @@
+{
+  "scene": { "width": 944, "height": 490, "grid": 80 },
+
+  "style": {
+    "strokeWidth": 1.2,
+    "perimeterStrokeWidth": 1.0,
+
+    "gradientStops": [
+      { "color": "#1AA47B", "offset": "0%" },
+      { "color": "#E4FFCE", "offset": "45%" },
+      { "color": "#3CE661", "offset": "75%" },
+      { "color": "#1AA47B00", "offset": "100%" }
+    ],
+
+    "drawMs": 90,
+    "drawSpeedPxPerSec": 60,
+    "gapMs": 60,
+    "hideDelayMs": 10000,
+    "fadeOutMs": 700,
+    "perimeterSpeedPxPerSec": 50,
+    "gradientCycleMs": 4000
+  },
+
+  "centerRect": { "x": 294, "y": 40, "width": 360, "height": 256 },
+
+  "cardSizes": [
+    {
+      "id": "c1_leftTop",
+      "inner": { "w": 225, "h": 56 },
+      "outer": { "w": 241, "h": 72 }
+    },
+    {
+      "id": "c2_rightTop",
+      "inner": { "w": 233, "h": 56 },
+      "outer": { "w": 249, "h": 72 }
+    },
+    {
+      "id": "c3_rightMid",
+      "inner": { "w": 222, "h": 56 },
+      "outer": { "w": 238, "h": 72 }
+    },
+    {
+      "id": "c4_bottomRight",
+      "inner": { "w": 237, "h": 56 },
+      "outer": { "w": 253, "h": 72 }
+    },
+    {
+      "id": "c5_bottomLeft",
+      "inner": { "w": 233, "h": 56 },
+      "outer": { "w": 249, "h": 72 }
+    },
+    {
+      "id": "c6_leftBottom",
+      "inner": { "w": 235, "h": 56 },
+      "outer": { "w": 251, "h": 72 }
+    }
+  ],
+
+  "cards": [
+    { "id": "c1_leftTop", "x": 10, "y": 108 },
+    { "id": "c2_rightTop", "x": 694, "y": 108 },
+    { "id": "c3_rightMid", "x": 699, "y": 222 },
+    { "id": "c4_bottomRight", "x": 520, "y": 350 },
+    { "id": "c5_bottomLeft", "x": 182, "y": 350 },
+    { "id": "c6_leftBottom", "x": 5, "y": 222 }
+  ]
+}

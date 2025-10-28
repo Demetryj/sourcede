@@ -7,6 +7,7 @@ import {
   BookDemoButton,
 } from '@/components/common';
 import { CoverageCard, ResultsCard } from '@/components/ui';
+import HeroFlow from '@/components/ui/HeroFlow/HeroFlow';
 
 import { useBreakpoint } from '@/hooks';
 
@@ -42,6 +43,8 @@ export default function HomePage() {
 
   return (
     <>
+      <HeroFlow />
+
       <SureCedeImpactSection />
 
       <section className="section-general coverage-section">

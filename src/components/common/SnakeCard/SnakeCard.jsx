@@ -30,10 +30,31 @@ function SnakeCardFrame() {
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id="snakeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
+        {/* Gradient along the X axis bbox + smooth ping-pong */}
+        <linearGradient
+          id="snakeGrad"
+          gradientUnits="objectBoundingBox"
+          x1="0"
+          y1="0.5"
+          x2="1"
+          y2="0.5"
+        >
           <stop offset="0%" stopColor="#1AA47B" />
-          <stop offset="50%" stopColor="#E4FFCE" />
-          <stop offset="100%" stopColor="#3CE661" />
+          <stop offset="45%" stopColor="#E4FFCE" />
+          <stop offset="75%" stopColor="#3CE661" />
+          <stop offset="95%" stopColor="#1AA47B" />
+          <stop offset="100%" stopColor="#1AA47B" stopOpacity="0.5" />
+          {/* the movement of the gradient itself within the bbox */}
+          <animateTransform
+            attributeName="gradientTransform"
+            type="translate"
+            values="-0.35 0; 0.35 0; -0.35 0"
+            keyTimes="0; 0.5; 1"
+            dur="5000ms"
+            repeatCount="indefinite"
+            calcMode="spline"
+            keySplines=".25 .1 .25 1; .25 .1 .25 1"
+          />
         </linearGradient>
       </defs>
 
