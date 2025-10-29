@@ -1,4 +1,4 @@
-export default function BlockWuthSearch({ className, props }) {
+export default function BlockWithSearch({ className, props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -3,4 +3,4 @@ export { default as DocumentWithPencil } from './DocumentWithPencil';
 export { default as Handshake } from './Handshake';
 export { default as BagWithDollar } from './BagWithDollar';
 export { default as CalculatorWithDollar } from './CalculatorWithDollar';
-export { default as BlockWuthSearch } from './BlockWuthSearch';
+export { default as BlockWithSearch } from './BlockWithSearch';

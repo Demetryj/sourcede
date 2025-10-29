@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect } from 'react';
+
 import {
   FAQSection,
   StreamlinedReinsuranceSection,
@@ -6,8 +10,7 @@ import {
   BenefitCardList,
   BookDemoButton,
 } from '@/components/common';
-import { CoverageCard, ResultsCard } from '@/components/ui';
-import HeroFlow from '@/components/ui/HeroFlow/HeroFlow';
+import { CoverageCard, ResultsCard, HeroHomePageMobile, HeroFlow } from '@/components/ui';
 
 import { useBreakpoint } from '@/hooks';
 
@@ -20,7 +23,11 @@ import {
 import './HomePage.scss';
 
 export default function HomePage() {
-  const { isMobile, isTablet, isLaptop } = useBreakpoint();
+  useEffect(() => {
+    document.title = 'Home';
+  }, []);
+
+  const { isMobile, isTablet, isLaptop, isDesktop } = useBreakpoint();
 
   let peek;
 
@@ -43,10 +50,10 @@ export default function HomePage() {
 
   return (
     <>
+      <HeroHomePageMobile />
       <HeroFlow />
 
       <SureCedeImpactSection />
-
       <section className="section-general coverage-section">
         <div className="container-general coverage-section__container">
           <h3>Coverage Across Multiple Classes</h3>
@@ -59,7 +66,6 @@ export default function HomePage() {
           peek={peek}
         />
       </section>
-
       <section className="section-advantages">
         <div className="container-general">
           <div className="inner-container inner-container-with-borders">
@@ -80,9 +86,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <StreamlinedReinsuranceSection />
-
       <section className="section-general home-page__results-section">
         <div className="container-general">
           <h3>Real Results from Leading Cedants and Reinsurers</h3>
@@ -95,9 +99,7 @@ export default function HomePage() {
           width={isMobile ? '343px' : '540px'}
         />
       </section>
-
       <FAQSection />
-
       <section className="home-page__bottom-section">
         <div className="container-general">
           <div className="inner-container-bottom inner-container-with-borders home-page__bottom-section__container">

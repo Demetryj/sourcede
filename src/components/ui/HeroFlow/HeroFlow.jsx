@@ -10,7 +10,7 @@ import {
   Handshake,
   BagWithDollar,
   CalculatorWithDollar,
-  BlockWuthSearch,
+  BlockWithSearch,
 } from '@/components/icons/homeHero';
 
 import { useBreakpoint, useSvgPathSequencer, useSvgPerimeterMarquee } from '@/hooks';
@@ -304,7 +304,7 @@ export default function HeroFlow() {
             <Card
               card={cfg.cards[3]}
               title="Reinsurance Capacity Offering"
-              icon={BlockWuthSearch}
+              icon={BlockWithSearch}
             />
             <div
               className="heroFlow__center"

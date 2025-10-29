@@ -7,3 +7,5 @@ export { default as TeamCard } from './TeamCard/TeamCard';
 export { default as CoverageCard } from './CoverageCard/CoverageCard';
 export { default as ResultsCard } from './ResultsCard/ResultsCard';
 export { default as MarketInsightsCard } from './MarketInsightsCard/MarketInsightsCard';
+export { default as HeroHomePageMobile } from './HeroHomePageMobile/HeroHomePageMobile';
+export { default as HeroFlow } from './HeroFlow/HeroFlow';

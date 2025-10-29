@@ -9,6 +9,15 @@ import {
   Coverage,
 } from '@/components/icons/cardIcon';
 
+import {
+  Document,
+  DocumentWithPencil,
+  Handshake,
+  BagWithDollar,
+  CalculatorWithDollar,
+  BlockWithSearch,
+} from '@/components/icons/homeHero';
+
 import { SilverOakLogo, NovaRELogo, ApexRiskLogo } from '@/components/icons/companyLogo';
 
 export const coverageDataCardList = [
@@ -173,4 +182,13 @@ export const resultsCardListData = [
     label: 'Apex Risk',
     text: '“Through Surecede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
   },
+];
+
+export const heroCardListData = [
+  Document,
+  BlockWithSearch,
+  CalculatorWithDollar,
+  BagWithDollar,
+  Handshake,
+  DocumentWithPencil,
 ];
