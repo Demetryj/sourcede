@@ -9,6 +9,13 @@ const comments = [
     createdAt: '1d ago',
     text: 'I really liked the point on analytics. In our company, dashboards have reduced decision time by almost half. Would love to hear if others are seeing similar efficiency gains.',
   },
+
+  {
+    id: 2,
+    name: 'John',
+    createdAt: '2d ago',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do.',
+  },
 ];
 
 export default function ArticleComments() {
