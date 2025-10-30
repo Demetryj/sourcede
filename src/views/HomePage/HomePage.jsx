@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
-
 import {
   FAQSection,
   StreamlinedReinsuranceSection,
@@ -9,7 +7,6 @@ import {
   SliderCommon,
   BenefitCardList,
   BookDemoButton,
-  AuroraBackground,
 } from '@/components/common';
 import { CoverageCard, ResultsCard, HeroHomePageMobile, HeroFlow } from '@/components/ui';
 
@@ -24,10 +21,6 @@ import {
 import './HomePage.scss';
 
 export default function HomePage() {
-  useEffect(() => {
-    document.title = 'Home';
-  }, []);
-
   const { isMobile, isTablet, isLaptop } = useBreakpoint();
 
   let peek;
