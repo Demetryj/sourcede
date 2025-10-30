@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import { Bounce, ToastContainer } from 'react-toastify';
+
 import { Header, Footer } from '@/components/ui';
 
 import '../sass/globals.scss';
@@ -37,6 +39,19 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${roobert.variable}`}>
         <Header />
         <main>{children}</main>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
         <Footer />
       </body>
     </html>

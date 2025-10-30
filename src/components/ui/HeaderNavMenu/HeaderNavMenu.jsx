@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import {
@@ -16,9 +16,12 @@ import {
   FloatingPortal,
   FloatingFocusManager,
   useFocus,
+  autoUpdate,
 } from '@floating-ui/react';
 
 import { TextButton } from '@/components/common';
+
+import { useBreakpoint } from '@/hooks';
 
 import {
   headerNavMenuData,
@@ -31,13 +34,22 @@ import './HeaderNavMenu.scss';
 function MenuWithDropdown({ title, withIcon, items, placement = 'bottom-start' }) {
   const [open, setOpen] = useState(false);
 
+  const { isTablet } = useBreakpoint();
+
   const { refs, floatingStyles, context } = useFloating({
     open,
     onOpenChange: setOpen,
     placement,
     middleware: [offset(16), flip(), shift()],
     strategy: 'fixed',
+    whileElementsMounted: autoUpdate,
   });
+
+  useEffect(() => {
+    if (isTablet && open) {
+      setOpen(false);
+    }
+  }, [isTablet]);
 
   const hover = useHover(context, {
     move: true,
