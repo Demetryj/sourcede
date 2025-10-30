@@ -9,6 +9,7 @@ import {
   SliderCommon,
   BenefitCardList,
   BookDemoButton,
+  AuroraBackground,
 } from '@/components/common';
 import { CoverageCard, ResultsCard, HeroHomePageMobile, HeroFlow } from '@/components/ui';
 
@@ -50,8 +51,10 @@ export default function HomePage() {
 
   return (
     <>
-      <HeroHomePageMobile />
-      <HeroFlow />
+      <AuroraBackground>
+        <HeroHomePageMobile />
+        <HeroFlow />
+      </AuroraBackground>
 
       <SureCedeImpactSection />
       <section className="section-general coverage-section">

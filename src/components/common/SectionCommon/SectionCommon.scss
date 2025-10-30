@@ -9,28 +9,10 @@
   }
 }
 
-.section-common__bg-gradient {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 966px;
-  height: 600px;
-
-  background-image: url('/icons/bg-hero-svg.svg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @include tablet {
-    top: 0;
-    left: 0;
-    inset: 0;
-  }
-}
-
 .section-common__bg-image {
   position: relative;
+  z-index: 2;
+
   width: 100%;
 
   background: none;
@@ -49,6 +31,9 @@
 }
 
 .section-common__card {
+  position: relative;
+  z-index: 3;
+
   padding: 24px 8px;
   width: 100%;
 

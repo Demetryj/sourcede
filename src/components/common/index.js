@@ -22,3 +22,4 @@ export { default as CountUpOnView } from './CountUpOnView/CountUpOnView';
 export { default as SliderCommon } from './SliderCommon/SliderCommon';
 export { default as SnakeCard } from './SnakeCard/SnakeCard';
 export { default as Pagination } from './Pagination/Pagination';
+export { default as AuroraBackground } from './AuroraBackground/AuroraBackground';
