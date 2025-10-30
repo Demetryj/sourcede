@@ -45,13 +45,6 @@
   }
 }
 
-.header__demo-btn {
-  &:hover,
-  &:focus-visible {
-    opacity: 0.9;
-  }
-}
-
 .header__burger-menu-btn {
   display: flex;
   align-items: center;
