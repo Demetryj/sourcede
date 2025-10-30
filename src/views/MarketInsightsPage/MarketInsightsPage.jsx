@@ -63,7 +63,7 @@ export default function MarketInsightsPage() {
 
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
-  console.log(totalPages);
+
   return (
     <>
       <SectionCommon
@@ -74,7 +74,7 @@ export default function MarketInsightsPage() {
           </>
         }
         subtitle="Sign up for information and updates from Surecede about the latest reinsurance trends, market insights, and community discussions."
-        bgImage="/images/market-insights-bg.png"
+        bgImage="/images/market-insights-bg.webp"
       >
         <SubscriptionForm primary />
       </SectionCommon>
