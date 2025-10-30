@@ -25,7 +25,7 @@ export default function Footer() {
               <div className="footer__subscribe-block">
                 <h6 className="footer__subscribe-title">Stay up to date</h6>
 
-                <SubscriptionForm name="footer_subscription" />
+                <SubscriptionForm id="footer_subscription" footerForm />
 
                 <p className="footer__subscribe-text">
                   Coming soon! Sign up now to receive the latest market updates.

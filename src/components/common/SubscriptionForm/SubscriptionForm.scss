@@ -32,6 +32,14 @@
     padding-bottom: 12px;
     height: 48px;
   }
+
+  &.error.footer-form {
+    border: 1.5px solid $red;
+  }
+
+  &.error {
+    border-color: $red;
+  }
 }
 
 .subscription-form__submit-btn {

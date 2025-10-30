@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
 import { Controller, useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 
@@ -9,6 +11,8 @@ import {
   PrimaryButton,
   TextareaGeneral,
 } from '@/components/common';
+
+import { submitToGAS } from '@/lib/submitToGAS';
 
 import { contactUsFormSchema } from '@/validationSchemas/contactUsFormSchema';
 import { inputsListData, inquiryList } from '@/data/contactUsForm';
@@ -26,6 +30,15 @@ const initialFormState = {
 };
 
 export default function ContactUsForm() {
+  const issuedAtRef = useRef(0);
+
+  /**Set the time for antispam checking
+   * must be ≥ 4 sec и ≤ 2 h
+   */
+  useEffect(() => {
+    issuedAtRef.current = Date.now();
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -38,10 +51,31 @@ export default function ContactUsForm() {
     mode: 'onTouched',
   });
 
-  const onSubmit = data => {
-    console.log('form:', data);
-    reset();
-  };
+  async function onSubmit(values) {
+    const mapped = {
+      firstName: values.first_name,
+      lastName: values.last_name,
+      email: values.email,
+      phone: values.phone_number,
+      position: values.position,
+      inquiry: values.inquiry,
+      message: values.message,
+    };
+
+    const payload = {
+      formType: 'contact',
+      issuedAt: issuedAtRef.current,
+      formData: mapped,
+    };
+
+    const { ok, status, data } = await submitToGAS(payload);
+    if (ok) {
+      alert('Thank you! We will contact you soon.');
+      reset();
+    } else {
+      alert('Sending error (' + status + '): ' + (data?.error || 'Try later'));
+    }
+  }
 
   return (
     <form className="contact-us-form" onSubmit={handleSubmit(onSubmit)}>
