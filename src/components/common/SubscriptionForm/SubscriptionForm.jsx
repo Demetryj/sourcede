@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
+import { toast } from 'react-toastify';
 import clsx from 'clsx';
 
 import { PrimaryButton, SecondaryButton } from '@/components/common';
@@ -27,28 +28,36 @@ export default function SubscriptionForm({ primary, id, footerForm }) {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: { email: '' },
     resolver: joiResolver(subscribeFormSchema),
     mode: 'onTouched',
   });
 
-  async function onSubmit(values) {
+  const onSubmit = async values => {
     const payload = {
       formType: 'newsletter',
       issuedAt: issuedAtRef.current,
       formData: values,
     };
 
-    const { ok, status, data } = await submitToGAS(payload);
-    if (ok) {
-      alert('Thank you! We will contact you soon.');
-      reset();
-    } else {
-      alert('Sending error (' + status + '): ' + (data?.error || 'Try later'));
+    try {
+      const { ok, status, data } = await submitToGAS(payload);
+
+      if (ok) {
+        toast.success('Thank you! We will contact you soon.');
+        reset();
+      } else {
+        toast.error('Sending error.Try again later.');
+        console.warn(status, data);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      //
     }
-  }
+  };
 
   return (
     <form className="subscription-form" onSubmit={handleSubmit(onSubmit)}>
@@ -71,11 +80,16 @@ export default function SubscriptionForm({ primary, id, footerForm }) {
           type="submit"
           additionalClass="subscription-form__submit-btn primary"
           disabled={errors.email}
+          isSubmitting={isSubmitting}
         >
           Subscribe
         </PrimaryButton>
       ) : (
-        <SecondaryButton type="submit" additionalClass="subscription-form__submit-btn">
+        <SecondaryButton
+          type="submit"
+          additionalClass="subscription-form__submit-btn"
+          isSubmitting={isSubmitting}
+        >
           Subscribe
         </SecondaryButton>
       )}

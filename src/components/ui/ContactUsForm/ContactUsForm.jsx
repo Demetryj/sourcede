@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { toast } from 'react-toastify';
 
 import { Controller, useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
@@ -44,14 +45,14 @@ export default function ContactUsForm() {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: initialFormState,
     resolver: joiResolver(contactUsFormSchema),
     mode: 'onTouched',
   });
 
-  async function onSubmit(values) {
+  const onSubmit = async values => {
     const mapped = {
       firstName: values.first_name,
       lastName: values.last_name,
@@ -62,20 +63,26 @@ export default function ContactUsForm() {
       message: values.message,
     };
 
-    const payload = {
-      formType: 'contact',
-      issuedAt: issuedAtRef.current,
-      formData: mapped,
-    };
+    try {
+      const { ok, status, data } = await submitToGAS({
+        formType: 'contact',
+        issuedAt: issuedAtRef.current,
+        formData: mapped,
+      });
 
-    const { ok, status, data } = await submitToGAS(payload);
-    if (ok) {
-      alert('Thank you! We will contact you soon.');
-      reset();
-    } else {
-      alert('Sending error (' + status + '): ' + (data?.error || 'Try later'));
+      if (ok) {
+        toast.success('Thank you! We will contact you soon.');
+        reset();
+      } else {
+        toast.error('Sending error.Try again later.');
+        console.warn(status, data);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      //
     }
-  }
+  };
 
   return (
     <form className="contact-us-form" onSubmit={handleSubmit(onSubmit)}>
@@ -119,7 +126,11 @@ export default function ContactUsForm() {
         {...register('message')}
       />
 
-      <PrimaryButton type="submit" additionalClass="contact-us-form__submit-btn">
+      <PrimaryButton
+        type="submit"
+        additionalClass="contact-us-form__submit-btn"
+        isSubmitting={isSubmitting}
+      >
         Submit
       </PrimaryButton>
     </form>
