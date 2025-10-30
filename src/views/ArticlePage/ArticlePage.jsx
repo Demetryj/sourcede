@@ -28,7 +28,7 @@ export default function ArticlePage({ articleId }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    window.scrollTo({ top });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   useEffect(() => {
