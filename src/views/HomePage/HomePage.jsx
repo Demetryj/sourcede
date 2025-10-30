@@ -27,7 +27,7 @@ export default function HomePage() {
     document.title = 'Home';
   }, []);
 
-  const { isMobile, isTablet, isLaptop, isDesktop } = useBreakpoint();
+  const { isMobile, isTablet, isLaptop } = useBreakpoint();
 
   let peek;
 
