@@ -9,3 +9,5 @@ export { default as ResultsCard } from './ResultsCard/ResultsCard';
 export { default as MarketInsightsCard } from './MarketInsightsCard/MarketInsightsCard';
 export { default as HeroHomePageMobile } from './HeroHomePageMobile/HeroHomePageMobile';
 export { default as HeroFlow } from './HeroFlow/HeroFlow';
+export { default as DiscussionForm } from './DiscussionForm/DiscussionForm';
+export { default as ArticleComments } from './ArticleComments/ArticleComments';

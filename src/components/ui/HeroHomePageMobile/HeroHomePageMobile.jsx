@@ -4,11 +4,15 @@ import clsx from 'clsx';
 
 import { BookDemoButton, SnakeCard } from '@/components/common';
 
+import { useBreakpoint } from '@/hooks';
+
 import { heroCardListData } from '@/data/homePageData';
 
 import './HeroHomePageMobile.scss';
 
 export default function HeroHomePageMobile() {
+  const { isTablet } = useBreakpoint();
+
   return (
     <section className="hero-home-page-mobile">
       <div className="hero-home-page-mobile__container">
@@ -29,25 +33,27 @@ export default function HeroHomePageMobile() {
           <div className="hero-home-page-mobile__bg-image" />
         </div>
 
-        <div className="container-general">
-          <ul className="hero-home-page-mobile__grid-card">
-            {heroCardListData.map((IconComponent, index) => {
-              return (
-                <li
-                  key={index}
-                  className={clsx('hero-home-page-mobile__grid-card-item', `ig--${index + 1}`)}
-                >
-                  <SnakeCard>
-                    <div className="hero-home-page-mobile__card-item">
-                      <div className="hero-home-page-mobile__card">
-                        <IconComponent />
+        <div className="container-general hero-home-page-mobile__cards-container">
+          {isTablet && (
+            <ul className="hero-home-page-mobile__grid-card">
+              {heroCardListData.map((IconComponent, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={clsx('hero-home-page-mobile__grid-card-item', `ig--${index + 1}`)}
+                  >
+                    <SnakeCard>
+                      <div className="hero-home-page-mobile__card-item">
+                        <div className="hero-home-page-mobile__card">
+                          <IconComponent />
+                        </div>
                       </div>
-                    </div>
-                  </SnakeCard>
-                </li>
-              );
-            })}
-          </ul>
+                    </SnakeCard>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </div>
       </div>
     </section>

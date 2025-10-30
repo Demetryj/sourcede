@@ -1,0 +1,9 @@
+.discussion-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.discussion-form__input {
+  max-width: 343px;
+}

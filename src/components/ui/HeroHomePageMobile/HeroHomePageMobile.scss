@@ -97,6 +97,10 @@
   overflow: hidden;
 }
 
+.hero-home-page-mobile__cards-container {
+  min-height: 296px;
+}
+
 .hero-home-page-mobile__grid-card {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));

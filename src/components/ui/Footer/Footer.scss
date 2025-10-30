@@ -94,7 +94,7 @@
 .footer__nav-link {
   color: $gray-30;
 
-  $transition: $transition;
+  transition: $transition;
 
   &:hover,
   &:focus-visible {

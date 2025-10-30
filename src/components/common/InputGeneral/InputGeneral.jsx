@@ -11,12 +11,13 @@ export default function InputGeneral({
   placeholder = '',
   disabled,
   errors,
+  additionalClass = '',
   ...props
 }) {
   const hasError = errors && errors[name]?.message;
 
   return (
-    <div className="input-general">
+    <div className={clsx('input-general', additionalClass && additionalClass)}>
       {label && (
         <label htmlFor={name} className="input-general__label">
           {label}

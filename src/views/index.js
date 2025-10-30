@@ -3,3 +3,4 @@ export { default as ContactUsPage } from './ContactUsPage/ContactUsPage';
 export { default as PlatformPage } from './PlatformPage/PlatformPage';
 export { default as AboutUsPage } from './AboutUsPage/AboutUsPage';
 export { default as MarketInsightsPage } from './MarketInsightsPage/MarketInsightsPage';
+export { default as ArticlePage } from './ArticlePage/ArticlePage';

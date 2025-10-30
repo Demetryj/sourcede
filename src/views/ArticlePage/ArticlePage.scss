@@ -1,0 +1,348 @@
+.ap-article {
+  position: relative;
+}
+
+.ap-article__container {
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include largeTablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.ap-article__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  background-color: $gray-10;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    gap: 48px;
+  }
+}
+
+.ap-article__back-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  color: $primary-text;
+
+  & a {
+    display: block;
+    height: 32px;
+  }
+}
+
+.ap-article__back-block__button {
+  background-color: transparent;
+}
+
+.ap__article-error-message {
+  text-align: center;
+}
+
+//----- body
+.ap-article__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include largeTablet {
+    flex-direction: row;
+    gap: 44px;
+  }
+}
+
+//----- info block
+.ap-article__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include largeTablet {
+    padding-top: 24px;
+    min-width: 198px;
+    width: 198px;
+  }
+
+  @include desktop {
+    gap: 24px;
+    min-width: 360;
+    width: 336px;
+  }
+}
+
+.ap-article__info__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include largeTablet {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @include desktop {
+    gap: 24px;
+  }
+}
+
+.ap-article__info__date-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  color: $secondary-text;
+  white-space: nowrap;
+}
+
+.ap-article__info__date-time__dot {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  background-color: $gray-80;
+}
+
+.ap-article__info__bages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include largeTablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.ap-article__info__bages-item {
+  padding: 8px 16px;
+
+  font-size: 14px;
+  white-space: nowrap;
+  color: $secondary-text;
+
+  border-radius: 4px;
+  border: 1px solid $gray-30;
+}
+
+.ap-article__info__share-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  white-space: nowrap;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include largeTablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.ap-article__info__share-block__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ap-article__info__share-block__button {
+  background-color: transparent;
+}
+
+//----- body
+
+//----- article
+.ap-article__article {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
+}
+
+.ap-article__image {
+  margin-bottom: 16px;
+  width: 100%;
+  height: 370px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.ap-article__title {
+  margin: 8px 0 16px;
+
+  @include tablet {
+    margin: 8px 0 24px;
+  }
+
+  @include desktop {
+    margin: 16px 0 32px;
+  }
+}
+
+.ap-article__subtitle {
+  margin-bottom: 8px;
+}
+
+.ap-article__paragraf:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+
+.ap-article__dot-list {
+  margin-bottom: 16px;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+//----- discussion block
+
+.ap-article__discussion-block {
+  border-top: 1px solid $gray-30;
+  border-bottom: 1px solid $gray-30;
+}
+
+.ap-article__discussion-block__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
+}
+
+//----- comments block
+
+.ap-article__comments-block {
+  padding-top: 40px;
+
+  @include largeTablet {
+    padding-top: 88px;
+  }
+}
+
+//----- random cards section
+
+.ap-article__random-card__title {
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
+}
+
+.ap-article__random-card__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include largeTablet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+//----- bottom section
+.ap-article__bottom-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 8px;
+
+  background-color: $secondary-100;
+
+  @include largeTablet {
+    padding: 32px 24px;
+  }
+}
+
+.ap-article__bottom-section__wrapper form {
+  @include tablet {
+    width: 344px;
+  }
+
+  @include largeTablet {
+    width: 432px;
+  }
+}
+
+.ap-article__bottom-section__title {
+  margin-bottom: 16px;
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 24px;
+  }
+}
+
+.ap-article__bottom-section__text {
+  margin-bottom: 16px;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+}
