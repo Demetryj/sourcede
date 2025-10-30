@@ -23,21 +23,21 @@ import './HomePage.scss';
 export default function HomePage() {
   const { isMobile, isTablet, isLaptop } = useBreakpoint();
 
-  let peek;
+  let sliderPeek;
 
   switch (true) {
     case isMobile:
-      peek = 310;
+      sliderPeek = 310;
       break;
     case isTablet:
-      peek = 300;
+      sliderPeek = 300;
       break;
     case isLaptop:
-      peek = 230;
+      sliderPeek = 230;
       break;
 
     default:
-      peek = 163;
+      sliderPeek = 163;
 
       break;
   }
@@ -57,7 +57,7 @@ export default function HomePage() {
           cardComponent={CoverageCard}
           dataList={coverageDataCardList}
           spaceBetween={16}
-          peek={peek}
+          peek={sliderPeek}
         />
       </section>
       <section className="section-advantages">

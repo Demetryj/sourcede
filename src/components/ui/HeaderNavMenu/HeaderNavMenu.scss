@@ -28,7 +28,7 @@
   box-shadow: $shadow-3;
 
   transform-origin: top;
-  transform: translateY(8px) scale(0.5);
+  transform: var(--floating-ui-transform) translateY(8px) scale(0.5);
   opacity: 0;
   transition:
     transform 500ms ease,
