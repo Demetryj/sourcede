@@ -51,10 +51,8 @@ export default function HomePage() {
 
   return (
     <>
-      <AuroraBackground>
-        <HeroHomePageMobile />
-        <HeroFlow />
-      </AuroraBackground>
+      <HeroHomePageMobile />
+      <HeroFlow />
 
       <SureCedeImpactSection />
       <section className="section-general coverage-section">

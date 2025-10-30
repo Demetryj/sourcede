@@ -2,7 +2,7 @@
 
 import { useMemo, useRef } from 'react';
 
-import { BookDemoButton } from '@/components/common';
+import { BookDemoButton, AuroraBackground } from '@/components/common';
 
 import {
   Document,
@@ -186,206 +186,208 @@ export default function HeroFlow() {
 
   return (
     <section className="heroFlow">
-      <div className="inner-container  heroFlow__gridArea">
-        <header className="heroFlow__header">
-          <h1 className="heroFlow__title">
-            An Aggregated Tool for Your <br /> Insurance and Reinsurance Needs
-          </h1>
-          <p className="heroFlow__subtitle">
-            Connecting cedants and reinsurers across MENA to streamline submissions, reduce <br />
-            costs, and optimize access to capacity.
-          </p>
+      <AuroraBackground>
+        <div className="inner-container  heroFlow__gridArea">
+          <header className="heroFlow__header">
+            <h1 className="heroFlow__title">
+              An Aggregated Tool for Your <br /> Insurance and Reinsurance Needs
+            </h1>
+            <p className="heroFlow__subtitle">
+              Connecting cedants and reinsurers across MENA to streamline submissions, reduce <br />
+              costs, and optimize access to capacity.
+            </p>
 
-          <BookDemoButton />
-        </header>
+            <BookDemoButton />
+          </header>
 
-        <div className="heroFlow__stage" style={{ width: scene.width, height: scene.height }}>
-          {/* BOTTOM SVG: perimeters under cards*/}
-          <svg
-            ref={perimsRef}
-            className="heroFlow__svgPerims"
-            viewBox={`0 0 ${scene.width} ${scene.height}`}
-            width={scene.width}
-            height={scene.height}
-            aria-hidden="true"
-          >
-            <defs>
-              {/* Soft glow for perimeters*/}
-              <filter
-                id="mintGlowPerim"
-                x="-60%"
-                y="-60%"
-                width="220%"
-                height="220%"
-                colorInterpolationFilters="sRGB"
-              >
-                <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b" />
-                <feColorMatrix
-                  in="b"
-                  type="matrix"
-                  values="
+          <div className="heroFlow__stage" style={{ width: scene.width, height: scene.height }}>
+            {/* BOTTOM SVG: perimeters under cards*/}
+            <svg
+              ref={perimsRef}
+              className="heroFlow__svgPerims"
+              viewBox={`0 0 ${scene.width} ${scene.height}`}
+              width={scene.width}
+              height={scene.height}
+              aria-hidden="true"
+            >
+              <defs>
+                {/* Soft glow for perimeters*/}
+                <filter
+                  id="mintGlowPerim"
+                  x="-60%"
+                  y="-60%"
+                  width="220%"
+                  height="220%"
+                  colorInterpolationFilters="sRGB"
+                >
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b" />
+                  <feColorMatrix
+                    in="b"
+                    type="matrix"
+                    values="
                   1 0 0 0 0
                   0 1 0 0 0
                   0 0 1 0 0
                   0 0 0 0.85 0"
-                  result="glow"
-                />
-                <feMerge>
-                  <feMergeNode in="glow" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
+                    result="glow"
+                  />
+                  <feMerge>
+                    <feMergeNode in="glow" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
 
-              {/* UA: unique gradient for EACH perimeter (objectBoundingBox), ping-pong */}
+                {/* UA: unique gradient for EACH perimeter (objectBoundingBox), ping-pong */}
+                {perimeters.map(p => (
+                  <linearGradient
+                    key={`gp-${p.id}`}
+                    id={`gp-${p.id}`}
+                    gradientUnits="objectBoundingBox"
+                    x1="0"
+                    y1="0.5"
+                    x2="1"
+                    y2="0.5"
+                  >
+                    {(style.gradientStops?.length
+                      ? style.gradientStops
+                      : [
+                          { offset: '0%', color: '#1AA47B' },
+                          { offset: '45%', color: '#E4FFCE' },
+                          { offset: '75%', color: '#3CE661' },
+                          { offset: '100%', color: '#1AA47B' },
+                        ]
+                    ).map((s, i) => (
+                      <stop key={i} offset={s.offset} stopColor={s.color} />
+                    ))}
+                    <animateTransform
+                      attributeName="gradientTransform"
+                      type="translate"
+                      values="-0.35 0; 0.35 0; -0.35 0"
+                      keyTimes="0; 0.5; 1"
+                      dur="8000ms"
+                      repeatCount="indefinite"
+                      calcMode="spline"
+                      keySplines=".25 .1 .25 1; .25 .1 .25 1"
+                    />
+                  </linearGradient>
+                ))}
+              </defs>
+
               {perimeters.map(p => (
-                <linearGradient
-                  key={`gp-${p.id}`}
-                  id={`gp-${p.id}`}
-                  gradientUnits="objectBoundingBox"
-                  x1="0"
-                  y1="0.5"
-                  x2="1"
-                  y2="0.5"
-                >
-                  {(style.gradientStops?.length
-                    ? style.gradientStops
-                    : [
-                        { offset: '0%', color: '#1AA47B' },
-                        { offset: '45%', color: '#E4FFCE' },
-                        { offset: '75%', color: '#3CE661' },
-                        { offset: '100%', color: '#1AA47B' },
-                      ]
-                  ).map((s, i) => (
-                    <stop key={i} offset={s.offset} stopColor={s.color} />
-                  ))}
-                  <animateTransform
-                    attributeName="gradientTransform"
-                    type="translate"
-                    values="-0.35 0; 0.35 0; -0.35 0"
-                    keyTimes="0; 0.5; 1"
-                    dur="8000ms"
-                    repeatCount="indefinite"
-                    calcMode="spline"
-                    keySplines=".25 .1 .25 1; .25 .1 .25 1"
-                  />
-                </linearGradient>
+                <path
+                  key={p.id}
+                  d={p.d}
+                  data-perimeter
+                  stroke={`url(#gp-${p.id})`} /* own full gradient on EVERY contour */
+                  strokeWidth={style.perimeterStrokeWidth}
+                  strokeLinecap="round"
+                  fill="none"
+                  filter="url(#mintGlowPerim)" /* for a soft halo */
+                />
               ))}
-            </defs>
+            </svg>
 
-            {perimeters.map(p => (
-              <path
-                key={p.id}
-                d={p.d}
-                data-perimeter
-                stroke={`url(#gp-${p.id})`} /* own full gradient on EVERY contour */
-                strokeWidth={style.perimeterStrokeWidth}
-                strokeLinecap="round"
-                fill="none"
-                filter="url(#mintGlowPerim)" /* for a soft halo */
+            {/* MIDDLE LAYER: cards + center */}
+            <div className="heroFlow__cardsLayer">
+              <Card card={cfg.cards[0]} title="Digital Risk Data Submission" icon={Document} />
+              <Card
+                card={cfg.cards[5]}
+                title="Automated Appetite Matching"
+                icon={DocumentWithPencil}
               />
-            ))}
-          </svg>
-
-          {/* MIDDLE LAYER: cards + center */}
-          <div className="heroFlow__cardsLayer">
-            <Card card={cfg.cards[0]} title="Digital Risk Data Submission" icon={Document} />
-            <Card
-              card={cfg.cards[5]}
-              title="Automated Appetite Matching"
-              icon={DocumentWithPencil}
-            />
-            <Card card={cfg.cards[1]} title="Binding & Document Issuance" icon={Handshake} />
-            <Card card={cfg.cards[2]} title="Contract Terms Negotiation" icon={BagWithDollar} />
-            <Card
-              card={cfg.cards[4]}
-              title="Reinsurance Risk Assessment"
-              icon={CalculatorWithDollar}
-            />
-            <Card
-              card={cfg.cards[3]}
-              title="Reinsurance Capacity Offering"
-              icon={BlockWithSearch}
-            />
-            <div
-              className="heroFlow__center"
-              style={{
-                left: centerRect.x,
-                top: centerRect.y,
-                width: centerRect.width,
-                height: centerRect.height,
-              }}
-            >
-              <div className="heroFlow__center__image" />
+              <Card card={cfg.cards[1]} title="Binding & Document Issuance" icon={Handshake} />
+              <Card card={cfg.cards[2]} title="Contract Terms Negotiation" icon={BagWithDollar} />
+              <Card
+                card={cfg.cards[4]}
+                title="Reinsurance Risk Assessment"
+                icon={CalculatorWithDollar}
+              />
+              <Card
+                card={cfg.cards[3]}
+                title="Reinsurance Capacity Offering"
+                icon={BlockWithSearch}
+              />
+              <div
+                className="heroFlow__center"
+                style={{
+                  left: centerRect.x,
+                  top: centerRect.y,
+                  width: centerRect.width,
+                  height: centerRect.height,
+                }}
+              >
+                <div className="heroFlow__center__image" />
+              </div>
             </div>
-          </div>
 
-          {/* TOP LAYER: connection + halo */}
-          <svg
-            ref={connsRef}
-            className="heroFlow__svgConns"
-            viewBox={`0 0 ${scene.width} ${scene.height}`}
-            width={scene.width}
-            height={scene.height}
-            aria-hidden="true"
-          >
-            <defs>
+            {/* TOP LAYER: connection + halo */}
+            <svg
+              ref={connsRef}
+              className="heroFlow__svgConns"
+              viewBox={`0 0 ${scene.width} ${scene.height}`}
+              width={scene.width}
+              height={scene.height}
+              aria-hidden="true"
+            >
+              <defs>
+                {segments.map(s => (
+                  <linearGradient
+                    key={`gc-${s.id}`}
+                    id={`gc-${s.id}`}
+                    gradientUnits="userSpaceOnUse"
+                    x1={s.p0.x}
+                    y1={s.p0.y}
+                    x2={s.p1.x}
+                    y2={s.p1.y} // full gradient exactly along the segment
+                  >
+                    {(style.gradientStops?.length
+                      ? style.gradientStops
+                      : [
+                          { offset: '0%', color: '#1AA47B' },
+                          { offset: '45%', color: '#E4FFCE' },
+                          { offset: '75%', color: '#3CE661' },
+                          { offset: '100%', color: '#1AA47B' },
+                        ]
+                    ).map((st, i) => (
+                      <stop key={i} offset={st.offset} stopColor={st.color} />
+                    ))}
+
+                    {/* Ping-pong displacement along the AXIS of the segment - amplitude from the length of the segment */}
+                    <animateTransform
+                      attributeName="gradientTransform"
+                      type="translate"
+                      values={
+                        s.axis === 'x'
+                          ? `${-s.len * 0.35} 0; ${s.len * 0.35} 0; ${-s.len * 0.35} 0`
+                          : `0 ${-s.len * 0.35}; 0 ${s.len * 0.35}; 0 ${-s.len * 0.35}`
+                      }
+                      keyTimes="0; 0.5; 1"
+                      dur={`${style.gradientCycleMs ?? 8000}ms`}
+                      repeatCount="indefinite"
+                      calcMode="spline"
+                      keySplines=".25 .1 .25 1; .25 .1 .25 1"
+                    />
+                  </linearGradient>
+                ))}
+              </defs>
+
               {segments.map(s => (
-                <linearGradient
-                  key={`gc-${s.id}`}
-                  id={`gc-${s.id}`}
-                  gradientUnits="userSpaceOnUse"
-                  x1={s.p0.x}
-                  y1={s.p0.y}
-                  x2={s.p1.x}
-                  y2={s.p1.y} // full gradient exactly along the segment
-                >
-                  {(style.gradientStops?.length
-                    ? style.gradientStops
-                    : [
-                        { offset: '0%', color: '#1AA47B' },
-                        { offset: '45%', color: '#E4FFCE' },
-                        { offset: '75%', color: '#3CE661' },
-                        { offset: '100%', color: '#1AA47B' },
-                      ]
-                  ).map((st, i) => (
-                    <stop key={i} offset={st.offset} stopColor={st.color} />
-                  ))}
-
-                  {/* Ping-pong displacement along the AXIS of the segment - amplitude from the length of the segment */}
-                  <animateTransform
-                    attributeName="gradientTransform"
-                    type="translate"
-                    values={
-                      s.axis === 'x'
-                        ? `${-s.len * 0.35} 0; ${s.len * 0.35} 0; ${-s.len * 0.35} 0`
-                        : `0 ${-s.len * 0.35}; 0 ${s.len * 0.35}; 0 ${-s.len * 0.35}`
-                    }
-                    keyTimes="0; 0.5; 1"
-                    dur={`${style.gradientCycleMs ?? 8000}ms`}
-                    repeatCount="indefinite"
-                    calcMode="spline"
-                    keySplines=".25 .1 .25 1; .25 .1 .25 1"
-                  />
-                </linearGradient>
+                <path
+                  key={s.id}
+                  d={s.d}
+                  data-conn={s.id}
+                  stroke={`url(#gc-${s.id})`}
+                  strokeWidth={style.strokeWidth ?? 1}
+                  strokeLinecap="round"
+                  strokeLinejoin="miter"
+                  fill="none"
+                  vectorEffect="non-scaling-stroke"
+                />
               ))}
-            </defs>
-
-            {segments.map(s => (
-              <path
-                key={s.id}
-                d={s.d}
-                data-conn={s.id}
-                stroke={`url(#gc-${s.id})`}
-                strokeWidth={style.strokeWidth ?? 1}
-                strokeLinecap="round"
-                strokeLinejoin="miter"
-                fill="none"
-                vectorEffect="non-scaling-stroke"
-              />
-            ))}
-          </svg>
+            </svg>
+          </div>
         </div>
-      </div>
+      </AuroraBackground>
     </section>
   );
 }
