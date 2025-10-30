@@ -1,7 +1,8 @@
 .hero-home-page-mobile {
   --step: 54px;
 
-  padding: 40px 0 80px;
+  position: relative;
+
   overflow: hidden;
 
   background:
@@ -29,6 +30,8 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  padding: 40px 0 80px;
 }
 
 .hero-home-page-mobile__header {
