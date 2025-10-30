@@ -108,4 +108,35 @@ export const teamListData = [
     linkToProfile: 'https://www.linkedin.com/',
     image: '/images/team//david_lee.png',
   },
+
+  {
+    name: 'Andrew Johnson',
+    position: 'Chief Executive Officer',
+    linkToProfile: 'https://www.linkedin.com/',
+    image: '/images/team/andrew_johnson.png',
+  },
+  {
+    name: 'Evan Thompson',
+    position: 'Marketing Director',
+    linkToProfile: 'https://www.linkedin.com/',
+    image: '/images/team/evan_thompson.png',
+  },
+  {
+    name: 'Michael Smith',
+    position: 'Chief Technology Officer',
+    linkToProfile: 'https://www.linkedin.com/',
+    image: '/images/team//michael_smith.png',
+  },
+  {
+    name: 'Jan Chen',
+    position: 'Head of Product Development',
+    linkToProfile: 'https://www.linkedin.com/',
+    image: '/images/team/jan_chen.png',
+  },
+  {
+    name: 'David Lee',
+    position: 'Senior Data Analyst',
+    linkToProfile: 'https://www.linkedin.com/',
+    image: '/images/team//david_lee.png',
+  },
 ];
