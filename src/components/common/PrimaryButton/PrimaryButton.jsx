@@ -17,6 +17,21 @@ export default function PrimaryButton({
   href,
   ...props
 }) {
+  const Content = (
+    <>
+      <div className="primary-button__wrapper">
+        <span className="primary-button__label" aria-hidden="true">
+          <span className="primary-button__line">{children}</span>
+          <span className="primary-button__line">{children}</span>
+        </span>
+      </div>
+
+      <span className="sr-only">{typeof children === 'string' ? children : ''}</span>
+
+      {withIcon && <ArrowRight className="primary-button__icon" />}
+    </>
+  );
+
   if (href) {
     return (
       <Link
@@ -24,10 +39,9 @@ export default function PrimaryButton({
         className={clsx('primary-button', additionalClass && additionalClass)}
         target="_blank"
         rel="noopener noreferrer"
+        aria-disabled={disabled || undefined}
       >
-        {children}
-
-        {withIcon && <ArrowRight className="primary-button__icon" />}
+        {Content}
       </Link>
     );
   }
@@ -40,9 +54,7 @@ export default function PrimaryButton({
       className={clsx('primary-button', additionalClass && additionalClass)}
       {...props}
     >
-      {children}
-
-      {withIcon && <ArrowRight className="primary-button__icon" />}
+      {Content}
     </button>
   );
 }
