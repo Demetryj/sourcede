@@ -16,6 +16,7 @@ export default function SecondaryButton({
   withIcon,
   type = 'button',
   href,
+  isSubmitting,
   ...props
 }) {
   if (href) {
@@ -46,7 +47,7 @@ export default function SecondaryButton({
       className={clsx('secondary-button', additionalClass && additionalClass)}
       {...props}
     >
-      {children}
+      {isSubmitting ? 'Loading...' : children}
 
       {withIcon &&
         (isOpen ? (

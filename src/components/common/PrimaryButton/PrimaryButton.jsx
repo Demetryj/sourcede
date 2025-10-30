@@ -15,6 +15,7 @@ export default function PrimaryButton({
   withIcon,
   type = 'button',
   href,
+  isSubmitting,
   ...props
 }) {
   const Content = (
@@ -49,12 +50,12 @@ export default function PrimaryButton({
   return (
     <button
       type={type}
-      disabled={disabled}
+      disabled={disabled || isSubmitting}
       onClick={handleClick}
       className={clsx('primary-button', additionalClass && additionalClass)}
       {...props}
     >
-      {Content}
+      {isSubmitting ? 'Loading...' : Content}
     </button>
   );
 }
