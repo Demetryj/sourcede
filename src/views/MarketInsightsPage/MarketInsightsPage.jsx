@@ -76,7 +76,7 @@ export default function MarketInsightsPage() {
         subtitle="Sign up for information and updates from Surecede about the latest reinsurance trends, market insights, and community discussions."
         bgImage="/images/market-insights-bg.webp"
       >
-        <SubscriptionForm primary />
+        <SubscriptionForm primary id="market_insights_page" />
       </SectionCommon>
 
       <section id="market-insights" className="section-general market-insights-page__section">

@@ -247,7 +247,7 @@ export default function ArticlePage({ articleId }) {
                   Subscribe for concise market insights straight to your inbox.
                 </p>
 
-                <SubscriptionForm primary />
+                <SubscriptionForm primary id="article_page" />
               </div>
             </div>
           </div>
