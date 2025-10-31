@@ -57,7 +57,7 @@
   ],
 
   "cards": [
-    { "id": "c1_leftTop", "x": 10, "y": 12 },
+    { "id": "c1_leftTop", "x": 10, "y": 128 },
     { "id": "c2_rightTop", "x": 979, "y": 128 },
     { "id": "c3_rightMid", "x": 986, "y": 322 },
     { "id": "c4_bottomRight", "x": 724, "y": 517 },
