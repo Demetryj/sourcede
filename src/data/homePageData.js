@@ -199,7 +199,7 @@ export const advantagesCardListData = [
   },
   {
     icon: Money,
-    title: 'Extensive Capacityy',
+    title: 'Extensive Capacity',
     text: 'Access both onshore and DIFC-based reinsurers.',
   },
   {
