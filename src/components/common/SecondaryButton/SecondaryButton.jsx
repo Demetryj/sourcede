@@ -17,6 +17,7 @@ export default function SecondaryButton({
   type = 'button',
   href,
   isSubmitting,
+  withoutNewPage,
   ...props
 }) {
   if (href) {
@@ -24,8 +25,8 @@ export default function SecondaryButton({
       <Link
         href={href}
         className={clsx('secondary-button', additionalClass && additionalClass)}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={withoutNewPage ? undefined : '_blank'}
+        rel={withoutNewPage ? undefined : 'noopener noreferrer'}
       >
         {children}
 

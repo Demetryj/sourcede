@@ -131,7 +131,9 @@ export default function PlatformPage() {
                   platform.
                 </p>
 
-                <SecondaryButton href="">Book a Demo</SecondaryButton>
+                <SecondaryButton href="contact-us" withoutNewPage>
+                  Contact Us
+                </SecondaryButton>
               </div>
             </div>
           </div>
