@@ -1,6 +1,6 @@
 export const faqData = [
   {
-    title: 'What is Surecede and how does it simplify placement?',
+    title: 'What is SureCede and how does it simplify placement?',
     body: [
       <p key="1">
         {`SureCede's core mission is to solve key inefficiencies in the reinsurance market, such as
@@ -77,7 +77,7 @@ export const faqData = [
       <p key="8">
         Booking a demo is simple. Click the “Book a Demo” button on our homepage or contact page,
         choose a convenient time, and our team will guide you through the platform. You’ll see how
-        Surecede streamlines reinsurance workflows, reduces costs, and accelerates deal-making.
+        SureCede streamlines reinsurance workflows, reduces costs, and accelerates deal-making.
       </p>,
     ],
   },

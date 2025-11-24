@@ -232,17 +232,17 @@ export const resultsCardListData = [
   {
     logo: SilverOakLogo,
     label: 'SilverOak',
-    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using Surecede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
+    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using SureCede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
   },
   {
     logo: NovaRELogo,
     label: 'Nova RE',
-    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using Surecede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
+    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using SureCede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
   },
   {
     logo: ApexRiskLogo,
     label: 'Apex Risk',
-    text: '“Through Surecede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
+    text: '“Through SureCede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
   },
 
   // duplication
@@ -250,49 +250,49 @@ export const resultsCardListData = [
   {
     logo: SilverOakLogo,
     label: 'SilverOak',
-    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using Surecede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
+    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using SureCede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
   },
   {
     logo: NovaRELogo,
     label: 'Nova RE',
-    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using Surecede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
+    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using SureCede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
   },
   {
     logo: ApexRiskLogo,
     label: 'Apex Risk',
-    text: '“Through Surecede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
+    text: '“Through SureCede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
   },
 
   {
     logo: SilverOakLogo,
     label: 'SilverOak',
-    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using Surecede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
+    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using SureCede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
   },
   {
     logo: NovaRELogo,
     label: 'Nova RE',
-    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using Surecede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
+    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using SureCede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
   },
   {
     logo: ApexRiskLogo,
     label: 'Apex Risk',
-    text: '“Through Surecede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
+    text: '“Through SureCede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
   },
 
   {
     logo: SilverOakLogo,
     label: 'SilverOak',
-    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using Surecede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
+    text: '“A leading UAE-based cedant placed $XXXM in reinsurance capacity across 4 Lines of Business using SureCede’s Digital Submission and Priority Matrix tools, reducing placement time by XX% and cutting distribution costs by XX%.”',
   },
   {
     logo: NovaRELogo,
     label: 'Nova RE',
-    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using Surecede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
+    text: '“A DIFC-based reinsurer reviewed over XXX targeted submissions within 3 months using SureCede’s API Integration and Analytics, growing their cedant network by XX% while reducing acquisition costs.”',
   },
   {
     logo: ApexRiskLogo,
     label: 'Apex Risk',
-    text: '“Through Surecede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
+    text: '“Through SureCede’s end-to-end digital facultative workflow, a KSA cedent and DIFC-based reinsurer closed a complex property reinsurance deal in 5 days, XX% faster than the market average.”',
   },
 ];
 

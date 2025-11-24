@@ -82,7 +82,7 @@ export default function PlatformPage() {
         <div className="container-general">
           <div className="inner-container inner-container-with-borders plarform-page__solutions-section__inner-container">
             <div className="plarform-page__solutions-section__card">
-              <h2>Surecede Solves Market Problems</h2>
+              <h2>SureCede Solves Market Problems</h2>
 
               <p>
                 The Platform uses AI and other cutting-edge technologies to directly address key

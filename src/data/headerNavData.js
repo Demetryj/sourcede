@@ -69,7 +69,7 @@ export const aboutAsPageNavMenuData = [
     hash: '#team',
   },
   {
-    title: 'Why Surecede ',
+    title: 'Why SureCede ',
     description:
       'See what sets us apart and why industry leaders trust us as their partner of choice.',
     pathname: '/about-us',

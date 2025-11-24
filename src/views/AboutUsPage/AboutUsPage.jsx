@@ -24,7 +24,7 @@ export default function AboutUsPage() {
         hash="hero"
         bgImage="/images/about-us-bg.webp"
         title="Solving MENA Reinsurance Challenges"
-        subtitle="The MENA reinsurance market is fragmented, labor-intensive, and costly, with intermediary fees up to 25%, manual workflows, and limited data-driven decision-making. Surecede addresses these challenges by connecting cedants and reinsurers, providing extensive capacity, and offering analytics, risk modeling, and AI insights in a single secure digital platform."
+        subtitle="The MENA reinsurance market is fragmented, labor-intensive, and costly, with intermediary fees up to 25%, manual workflows, and limited data-driven decision-making. SureCede addresses these challenges by connecting cedants and reinsurers, providing extensive capacity, and offering analytics, risk modeling, and AI insights in a single secure digital platform."
       />
 
       <section id="mission" className="about-us__mission-section">
@@ -35,7 +35,7 @@ export default function AboutUsPage() {
 
               <div className="about-us__mission-section__header__text-wrapper">
                 <p>
-                  We created Surecede to simplify reinsurance. We help cedants and reinsurers save
+                  We created SureCede to simplify reinsurance. We help cedants and reinsurers save
                   time, reduce costs, and gain actionable market insights all through a secure
                   digital platform. <br />
                   Our goal is to replace manual, fragmented workflows with a seamless, fully digital
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
         <div className="container-general">
           <div className="about-us__team-section__header">
             <h3>
-              Meet the Experts <br /> Behind Surecede
+              Meet the Experts <br /> Behind SureCede
             </h3>
 
             <p>

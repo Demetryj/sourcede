@@ -64,11 +64,11 @@ export default function HomePage() {
         <div className="container-general">
           <div className="inner-container inner-container-with-borders">
             <div className="section-advantages__header">
-              <h3>Why Choose Surecede</h3>
+              <h3>Why Choose SureCede</h3>
 
               <p>
                 In the MENA reinsurance market, high intermediary fees up to 25%, fragmented
-                workflows, and lack of transparency slow deal-making. Surecede replaces these
+                workflows, and lack of transparency slow deal-making. SureCede replaces these
                 inefficiencies with a fully digital, cost-effective, and transparent platform.
               </p>
             </div>
@@ -93,7 +93,9 @@ export default function HomePage() {
           width={isMobile ? '343px' : '540px'}
         />
       </section>
+
       <FAQSection />
+
       <section className="home-page__bottom-section">
         <div className="container-general">
           <div className="inner-container-bottom inner-container-with-borders home-page__bottom-section__container">
