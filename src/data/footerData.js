@@ -11,7 +11,7 @@ export const productNavDataFooter = [
 
 export const generalNavDataFooter = [
   { title: 'Contact Us', linkTo: '/contact-us' },
-  { title: 'Book a Demo', linkTo: '/about-us' },
+  { title: 'About Us', linkTo: '/about-us' },
   { title: 'Market Insights', linkTo: '/market-insights' },
 ];
 
