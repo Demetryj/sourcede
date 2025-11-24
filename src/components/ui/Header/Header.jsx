@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import { PrimaryButton, SecondaryButton } from '@/components/common';
+import { BookDemoButton, SecondaryButton } from '@/components/common';
 import { HeaderNavMenu, MobileMenu } from '@/components/ui';
 
 import { useBreakpoint } from '@/hooks';
@@ -54,11 +54,8 @@ export default function Header() {
 
         <div className="header__wrapper">
           <HeaderNavMenu />
-
           <SecondaryButton href={''}>Log In</SecondaryButton>
-          <PrimaryButton href={''} additionalClass="header__demo-btn">
-            Book a Demo
-          </PrimaryButton>
+          <BookDemoButton />
         </div>
 
         <button

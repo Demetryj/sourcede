@@ -28,7 +28,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $white;
-  line-height: 1.2;
+  line-height: 1.24;
 
   border-radius: 4px;
   background-color: $primary-100;
@@ -63,8 +63,9 @@
   }
 
   @include largeTablet {
+    padding: 14px 16px;
     height: 48px;
-    line-height: 1.76;
+    line-height: 1;
   }
 }
 
@@ -85,11 +86,10 @@
 }
 
 .primary-button__label {
-  display: grid;
-  grid-auto-rows: 1fr;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 
-  height: 100%;
+  height: 200%;
 
   transform: translateY(0%);
   transition: transform var(--btn-scroll-duration) var(--btn-scroll-ease);
@@ -100,14 +100,15 @@
   align-items: center;
   justify-content: center;
 
-  height: 100%;
+  flex: 0 0 50%;
+  height: 50%;
   white-space: nowrap;
 }
 
 .primary-button {
   &:hover .primary-button__label,
   &:focus-visible .primary-button__label {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
 
   &:disabled .primary-button__label {

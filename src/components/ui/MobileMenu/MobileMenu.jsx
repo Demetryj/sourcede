@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import { PrimaryButton, SecondaryButton, Accordion } from '@/components/common';
+import { SecondaryButton, Accordion, BookDemoButton } from '@/components/common';
 
 import {
   headerNavMenuData,
@@ -56,9 +56,8 @@ export default function MobileMenu({ isMobileMenuOpen, closeMobileMenu }) {
         <SecondaryButton href={''} additionalClass="mobile-menu__btn">
           Log In
         </SecondaryButton>
-        <PrimaryButton href={''} additionalClass="mobile-menu__btn">
-          Book a Demo
-        </PrimaryButton>
+
+        <BookDemoButton additionalClass="mobile-menu__btn" />
       </div>
     </div>
   );
