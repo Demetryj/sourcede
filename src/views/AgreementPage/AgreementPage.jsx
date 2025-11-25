@@ -63,13 +63,13 @@ export default function AgreementPage() {
             </li>
             <li>
               <p>
-                <strong>Processor</strong> means a natural or legal person, public authority,
+                <strong>“Processor”</strong> means a natural or legal person, public authority,
                 agency, or other body which processes personal data on behalf of the controller.
               </p>
             </li>
             <li>
               <p>
-                <strong>Sub-processor” </strong> means a processor/ sub-contractor appointed by the
+                <strong>“Sub-processor”</strong> means a processor/ sub-contractor appointed by the
                 Processor for the provision of all or parts of the Services and Processes the
                 Personal Data as provided by the Controller.
               </p>
