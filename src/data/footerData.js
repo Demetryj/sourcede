@@ -18,6 +18,6 @@ export const generalNavDataFooter = [
 
 export const socialMediaData = [
   { title: 'Facebook', linkTo: 'https://www.facebook.com/' },
-  { title: 'LinkedIn', linkTo: 'https://www.linkedin.com/' },
+  { title: 'LinkedIn', linkTo: 'https://www.linkedin.com/company/surecede' },
   { title: 'Instagram', linkTo: 'https://www.instagram.com/' },
 ];
