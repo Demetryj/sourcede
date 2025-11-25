@@ -80,7 +80,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       <StreamlinedReinsuranceSection />
+
       <section className="section-general home-page__results-section">
         <div className="container-general">
           <h3>Real Results from Leading Cedants and Reinsurers</h3>
