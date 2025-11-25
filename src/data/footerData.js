@@ -1,6 +1,7 @@
 export const rulesLinksData = [
-  { title: 'Terms Of Use', linkTo: '' },
-  { title: 'Privacy Policy', linkTo: '' },
+  { title: 'Terms Of Use', linkTo: '/terms-and-conditions' },
+  { title: 'Privacy Policy', linkTo: '/privacy-policy' },
+  { title: 'Agreement', linkTo: '/agreement' },
 ];
 
 export const productNavDataFooter = [
