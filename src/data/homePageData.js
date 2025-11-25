@@ -37,7 +37,7 @@ export const coverageDataCardList = [
     title: 'Financial Lines',
     bage1: 'D&O',
     bage2: 'PI',
-    image: '/images/coverage/financiak-lines-2.webp',
+    image: '/images/coverage/financial-lines-2.webp',
   },
   {
     title: 'Cyber',
@@ -117,7 +117,7 @@ export const coverageDataCardList = [
     title: 'Financial Lines',
     bage1: 'D&O',
     bage2: 'PI',
-    image: '/images/coverage/financiak-lines-2.webp',
+    image: '/images/coverage/financial-lines-2.webp',
   },
   {
     title: 'Cyber',
