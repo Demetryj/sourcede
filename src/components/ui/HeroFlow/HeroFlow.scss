@@ -1,11 +1,6 @@
 .heroFlow {
-  @media screen and (min-width: 375px) and (max-width: 1023.9) {
-    display: none;
-  }
-
   --step: 80px;
   overflow: hidden;
-  position: relative;
   background:
     repeating-linear-gradient(
       to right,
@@ -66,10 +61,6 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-
-  & [data-perimeter] {
-    filter: drop-shadow(0 0 6px rgba(58, 230, 97, 0.55));
-  }
 }
 .heroFlow__cardsLayer {
   position: absolute;
