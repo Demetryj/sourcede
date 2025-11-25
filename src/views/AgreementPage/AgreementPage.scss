@@ -1,0 +1,77 @@
+.dpa__container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include largeTablet {
+    gap: 16px;
+  }
+}
+
+.dpa__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dpa__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &--dot {
+    list-style: disc;
+    padding-left: 32px;
+  }
+
+  &--numbered {
+    list-style: decimal;
+    padding-left: 32px;
+  }
+
+  &--circle {
+    list-style: circle;
+    padding-left: 32px;
+  }
+
+  &--square {
+    list-style: square;
+    padding-left: 32px;
+  }
+}
+
+.dpa__list-item-text-with-bottom {
+  margin-bottom: 8px;
+}
+
+.dpa__sub-processors-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(2, auto);
+  border: 1px solid $gray-100;
+}
+
+.dpa__sub-processors-list-item {
+  display: contents;
+
+  &:first-child > .dpa__sub-processors-list__cell {
+    border-left: none;
+  }
+}
+
+.dpa__sub-processors-list__cell {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-left: 1px solid $gray-100;
+  border-top: 1px solid $gray-100;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  @include tablet {
+    padding: 16px;
+  }
+}
