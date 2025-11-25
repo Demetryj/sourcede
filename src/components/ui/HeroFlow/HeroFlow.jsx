@@ -211,32 +211,6 @@ export default function HeroFlow() {
               aria-hidden="true"
             >
               <defs>
-                {/* Soft glow for perimeters*/}
-                <filter
-                  id="mintGlowPerim"
-                  x="-60%"
-                  y="-60%"
-                  width="220%"
-                  height="220%"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b" />
-                  <feColorMatrix
-                    in="b"
-                    type="matrix"
-                    values="
-                  1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0 0 0 0.85 0"
-                    result="glow"
-                  />
-                  <feMerge>
-                    <feMergeNode in="glow" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-
                 {/* UA: unique gradient for EACH perimeter (objectBoundingBox), ping-pong */}
                 {perimeters.map(p => (
                   <linearGradient
@@ -282,7 +256,6 @@ export default function HeroFlow() {
                   strokeWidth={style.perimeterStrokeWidth}
                   strokeLinecap="round"
                   fill="none"
-                  filter="url(#mintGlowPerim)" /* for a soft halo */
                 />
               ))}
             </svg>
