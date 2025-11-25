@@ -1,7 +1,11 @@
 .header-nav-menu {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+
+  @include desktop {
+    gap: 16px;
+  }
 }
 
 .header-nav-menu__item {

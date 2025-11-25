@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import clsx from 'clsx';
 
 import { BookDemoButton, SecondaryButton } from '@/components/common';
@@ -49,6 +50,7 @@ export default function Header() {
     <header className="header">
       <div className={clsx('container-general', 'header__container')}>
         <Link href="/" className="header__logo" onClick={closeMobileMenu}>
+          <Image src="/icons/logo.svg" width={42} height={30} />
           SureCede
         </Link>
 
