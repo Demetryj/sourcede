@@ -1,0 +1,49 @@
+.tac-page__title {
+  margin-bottom: 24px;
+
+  text-align: center;
+
+  @include largeTablet {
+    margin-bottom: 32px;
+  }
+}
+
+.reluse__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include largeTablet {
+    gap: 24px;
+  }
+}
+
+.tac-page__list-item,
+.tac-page__sublist,
+.tac-page__deep-list,
+.tac-page__deep-list-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  @include largeTablet {
+    gap: 12px;
+  }
+}
+
+.tac-page__deep-list__sublist,
+.tac-page__deep-list__sublist-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  @include largeTablet {
+    gap: 8px;
+  }
+}
+
+.tac-page__deep-list__sublist {
+  padding-left: 36px;
+}
