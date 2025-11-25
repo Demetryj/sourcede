@@ -19,12 +19,17 @@
 }
 
 .heroFlow__gridArea {
+  display: none;
   position: relative;
 
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
   width: 1024px;
+
+  @include largeTablet {
+    display: block;
+  }
 
   @include desktop {
     padding-left: 90px;
