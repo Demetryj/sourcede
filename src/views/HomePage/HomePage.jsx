@@ -44,7 +44,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <HeroHomePageMobile /> */}
+      <HeroHomePageMobile />
       <HeroFlow />
 
       <SureCedeImpactSection />
