@@ -21,9 +21,9 @@
       $gray-30 var(--step)
     );
 
-  @include largeTablet {
-    display: none;
-  }
+  // @include largeTablet {
+  display: none;
+  // }
 }
 
 .hero-home-page-mobile__container {

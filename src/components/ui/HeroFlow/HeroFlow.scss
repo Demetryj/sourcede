@@ -27,9 +27,9 @@
   padding-right: 30px;
   width: 1024px;
 
-  @include largeTablet {
-    display: block;
-  }
+  // @include largeTablet {
+  //   display: block;
+  // }
 
   @include desktop {
     padding-left: 90px;
