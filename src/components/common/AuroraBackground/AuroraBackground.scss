@@ -72,3 +72,19 @@
     background-position: 200% 50%;
   }
 }
+
+@media (max-width: 1023px) {
+  .aurora-bg__layer {
+    filter: blur(18px) saturate(115%) brightness(102%);
+    background-size: 220%, 150%;
+    background-position:
+      50% 50%,
+      50% 50%;
+  }
+
+  .aurora-bg__layer::after {
+    opacity: 0.6;
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
