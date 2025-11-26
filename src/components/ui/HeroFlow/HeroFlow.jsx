@@ -144,7 +144,7 @@ export default function HeroFlow() {
 
   // ====== for perimeters
   useSvgPerimeterMarquee(perimsRef.current, {
-    visiblePortion: 0.5, // 50% довжини видно
+    visiblePortion: 0.5, // 50% of the length is visible
     speedPxPerSec: style.perimeterSpeedPxPerSec ?? 30,
     phaseDesync: 0.8,
   });
