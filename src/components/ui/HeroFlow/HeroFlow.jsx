@@ -213,7 +213,7 @@ export default function HeroFlow() {
             className="heroFlow__stage"
             style={{
               width: '100%',
-              // maxWidth: scene.width,
+              maxWidth: scene.width,
               height: scene.height,
             }}
           >
