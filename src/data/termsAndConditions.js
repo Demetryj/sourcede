@@ -23,14 +23,14 @@ export const termsAndConditionsData = [
       '<strong>2.8.</strong> Services means the duties, obligations and other services, together with the development of application that is to be performed by the Company under the directions of the Users.',
       '<strong>2.9.</strong> UAE means United Arab Emirates.',
       '<strong>2.10.</strong> Users means Insurance Companies, Reinsurers or their Authorized Insurance Brokers.',
-      `<strong>2.11.</strong> Website shall mean the following link – <u><strong><a href="https://aura-insure-tech-92.vercel.app" target='_blank' rel='noopener noreferrer'>Website</a></strong></u> link.`,
+      `<strong>2.11.</strong> Website shall mean the following link – <u><strong><a href="/">Website</a></strong></u> link.`,
     ],
   },
   {
     title: '3. Description of services of the company',
     list: [
       '<strong>3.1.</strong> The Company through its Website provides you with access to a variety of resources including information about the various insurance products, calculation and generation of quotation with respect to insurance premiums, information about the Company’s business, disclosures enhancements, new features, updates and other such relevant information.',
-      `<strong>3.2.</strong> The Company is also licensed by the ADGM, UAE, to offer software solutions to businesses. The Company may provide its Users with customized software solutions in the form of Mobile Applications, based on the requisites of the Users. Please click on the link <u><strong><a href="https://aura-insure-tech-92.vercel.app" target='_blank' rel='noopener noreferrer'>Privacy Policy</a></strong></u> to access the Terms and Conditions applicable to such customized Mobile Applications.`,
+      `<strong>3.2.</strong> The Company is also licensed by the ADGM, UAE, to offer software solutions to businesses. The Company may provide its Users with customized software solutions in the form of Mobile Applications, based on the requisites of the Users. Please click on the link <u><strong><a href="/privacy-policy">Privacy Policy</a></strong></u> to access the Terms and Conditions applicable to such customized Mobile Applications.`,
     ],
   },
   {
@@ -145,7 +145,7 @@ export const termsAndConditionsData = [
   {
     title: '15.	Privacy policy',
     paragraf:
-      'By using the Website, you accept the terms of Privacy Policy which is an integral part of these Terms and Conditions. Please click on this link ______ to refer to the Company’s Privacy Policy for information regarding collection, use and storage of your personal information.',
+      'By using the Website, you accept the terms of Privacy Policy which is an integral part of these Terms and Conditions. Please click on this link <u><strong><a href="/privacy-policy">Privacy Policy</a></strong></u> to refer to the Company’s Privacy Policy for information regarding collection, use and storage of your personal information.',
   },
   {
     title: '16.	Disputes  ',
@@ -176,8 +176,10 @@ export const termsAndConditionsData = [
       },
       {
         subtitle: '<strong>17.6.</strong> Grievance redressall',
-        text: 'You may submit any grievance in connection with the Website and services provided by the Company at: info@surecede.com',
+        text: 'You may submit any grievance in connection with the Website and services provided by the Company at: <strong>hamza@surecede.com</strong>',
       },
+
+      { text: '<strong>E-mail ID: info@surecede.com</strong>' },
     ],
   },
 ];
