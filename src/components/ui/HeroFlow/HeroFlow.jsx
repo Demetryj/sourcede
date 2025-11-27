@@ -209,7 +209,10 @@ export default function HeroFlow() {
             <BookDemoButton />
           </header>
 
-          <div className="heroFlow__stage" style={{ width: scene.width, height: scene.height }}>
+          <div
+            className="heroFlow__stage"
+            style={{ width: '100%', maxWidth: scene.width, height: scene.height }}
+          >
             {/* BOTTOM SVG: perimeters under cards*/}
             <svg
               ref={perimsRef}
