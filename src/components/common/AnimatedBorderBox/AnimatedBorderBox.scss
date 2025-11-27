@@ -1,0 +1,124 @@
+.animated-border-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.animated-border-box__container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background: transparent;
+  overflow: hidden;
+}
+
+.animated-border-box__container span:nth-child(1),
+.animated-border-box__container span:nth-child(2),
+.animated-border-box__container span:nth-child(3),
+.animated-border-box__container span:nth-child(4) {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  opacity: 0;
+  background: linear-gradient(to right, #1aa47b, #e4ffce 45%, #3ce661 75%, #1aa47b);
+}
+
+.animated-border-box__container span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(to right, #1aa47b, #e4ffce 45%, #3ce661 75%, #1aa47b);
+
+  animation: animate 12s linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animated-border-box__container span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 1.5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #1aa47b, #e4ffce 45%, #3ce661 75%, #1aa47b);
+  animation: animate2 12s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes animate2 {
+  0% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animated-border-box__container span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(to left, #1aa47b, #e4ffce 45%, #3ce661 75%, #1aa47b);
+  animation: animate3 12s linear infinite;
+  animation-delay: 6s;
+}
+@keyframes animate3 {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animated-border-box__container span:nth-child(4) {
+  top: 0;
+  left: 0;
+  width: 1.5px;
+  height: 100%;
+  background: linear-gradient(to top, #1aa47b, #e4ffce 45%, #3ce661 75%, #1aa47b);
+  animation: animate4 12s linear infinite;
+  animation-delay: 9s;
+}
+@keyframes animate4 {
+  0% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}

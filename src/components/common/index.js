@@ -23,3 +23,4 @@ export { default as SliderCommon } from './SliderCommon/SliderCommon';
 export { default as SnakeCard } from './SnakeCard/SnakeCard';
 export { default as Pagination } from './Pagination/Pagination';
 export { default as AuroraBackground } from './AuroraBackground/AuroraBackground';
+export { default as AnimatedBorderBox } from './AnimatedBorderBox/AnimatedBorderBox';
