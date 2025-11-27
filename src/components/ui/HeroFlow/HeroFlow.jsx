@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 
 import { BookDemoButton, AuroraBackground } from '@/components/common';
 
@@ -26,6 +26,18 @@ export default function HeroFlow() {
   const cfg = isLaptop ? configLaptop : configDesktop;
 
   const { scene, style, centerRect, cardSizes, cards } = cfg;
+
+  const perimsRef = useRef(null);
+  const connsRef = useRef(null);
+
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator === 'undefined') return;
+    const ua = navigator.userAgent;
+    const safari = /Safari/.test(ua) && !/Chrome|CriOS|Android|Edge|Edg|OPR/.test(ua);
+    setIsSafari(safari);
+  }, []);
 
   // ===== Geometry
   const anchor = (r, side) => {
@@ -139,9 +151,6 @@ export default function HeroFlow() {
   }, [outer, center]);
 
   // ====== refss to SVG
-  const perimsRef = useRef(null);
-  const connsRef = useRef(null);
-
   // ====== for perimeters
   useSvgPerimeterMarquee(perimsRef.current, {
     visiblePortion: 0.5, // 50% of the length is visible
@@ -204,38 +213,42 @@ export default function HeroFlow() {
             {/* BOTTOM SVG: perimeters under cards*/}
             <svg
               ref={perimsRef}
-              className="heroFlow__svgPerims"
+              className={`heroFlow__svgPerims${isSafari ? ' heroFlow__svgPerims--safari' : ''}`}
               viewBox={`0 0 ${scene.width} ${scene.height}`}
               width={scene.width}
               height={scene.height}
               aria-hidden="true"
             >
               <defs>
-                {/* Soft glow for perimeters*/}
-                <filter
-                  id="mintGlowPerim"
-                  x="-60%"
-                  y="-60%"
-                  width="220%"
-                  height="220%"
-                  colorInterpolationFilters="sRGB"
-                >
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b" />
-                  <feColorMatrix
-                    in="b"
-                    type="matrix"
-                    values="
+                {!isSafari && (
+                  <>
+                    {/* Soft glow for perimeters*/}
+                    <filter
+                      id="mintGlowPerim"
+                      x="-60%"
+                      y="-60%"
+                      width="220%"
+                      height="220%"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="b" />
+                      <feColorMatrix
+                        in="b"
+                        type="matrix"
+                        values="
                   1 0 0 0 0
                   0 1 0 0 0
                   0 0 1 0 0
                   0 0 0 0.85 0"
-                    result="glow"
-                  />
-                  <feMerge>
-                    <feMergeNode in="glow" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
+                        result="glow"
+                      />
+                      <feMerge>
+                        <feMergeNode in="glow" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </>
+                )}
 
                 {/* UA: unique gradient for EACH perimeter (objectBoundingBox), ping-pong */}
                 {perimeters.map(p => (
@@ -259,16 +272,18 @@ export default function HeroFlow() {
                     ).map((s, i) => (
                       <stop key={i} offset={s.offset} stopColor={s.color} />
                     ))}
-                    <animateTransform
-                      attributeName="gradientTransform"
-                      type="translate"
-                      values="-0.35 0; 0.35 0; -0.35 0"
-                      keyTimes="0; 0.5; 1"
-                      dur="8000ms"
-                      repeatCount="indefinite"
-                      calcMode="spline"
-                      keySplines=".25 .1 .25 1; .25 .1 .25 1"
-                    />
+                    {!isSafari && (
+                      <animateTransform
+                        attributeName="gradientTransform"
+                        type="translate"
+                        values="-0.35 0; 0.35 0; -0.35 0"
+                        keyTimes="0; 0.5; 1"
+                        dur="8000ms"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        keySplines=".25 .1 .25 1; .25 .1 .25 1"
+                      />
+                    )}
                   </linearGradient>
                 ))}
               </defs>
@@ -282,7 +297,7 @@ export default function HeroFlow() {
                   strokeWidth={style.perimeterStrokeWidth}
                   strokeLinecap="round"
                   fill="none"
-                  filter="url(#mintGlowPerim)" /* for a soft halo */
+                  filter={!isSafari ? 'url(#mintGlowPerim)' : undefined} /* for a soft halo */
                 />
               ))}
             </svg>

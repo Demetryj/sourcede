@@ -177,8 +177,11 @@
 }
 
 .heroFlow__svgConns [data-conn] {
-  transition: none !important;
   will-change: stroke-dashoffset, opacity;
+}
+
+.heroFlow__svgPerims--safari [data-perimeter] {
+  filter: drop-shadow(0 0 8px rgba(26, 164, 123, 0.45));
 }
 
 // @media (prefers-reduced-motion: reduce) {

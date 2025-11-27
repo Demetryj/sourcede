@@ -2,6 +2,15 @@
 
 import { useEffect } from 'react';
 
+const lengthCache = new WeakMap();
+const getLength = el => {
+  if (!el) return 0;
+  if (!lengthCache.has(el)) {
+    lengthCache.set(el, el.getTotalLength?.() ?? 0);
+  }
+  return lengthCache.get(el);
+};
+
 /**
  * useSvgPathSequencer
  * Draws a sequence <path data-conn="..."> with dashoffset drawing and smooth fading.
@@ -22,10 +31,24 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
     const nextFrame = () => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
     const q = id => svgEl.querySelector(`[data-conn="${id}"]`);
+    const clearTimers = el => {
+      if (el.__hideTimer) {
+        clearTimeout(el.__hideTimer);
+        el.__hideTimer = null;
+      }
+      if (el.__drawTimer) {
+        clearTimeout(el.__drawTimer);
+        el.__drawTimer = null;
+      }
+      if (el.__fadeTimer) {
+        clearTimeout(el.__fadeTimer);
+        el.__fadeTimer = null;
+      }
+    };
 
     // Starting state: hide all lines without blinking
     svgEl.querySelectorAll('[data-conn]').forEach(el => {
-      const len = el.getTotalLength?.() ?? 0;
+      const len = getLength(el);
       if (!el.dataset.stroke) el.dataset.stroke = el.getAttribute('stroke') || '';
       el.style.transition = 'none';
       el.style.opacity = '0';
@@ -35,7 +58,8 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
     });
 
     const hardHide = el => {
-      const len = el.getTotalLength?.() ?? 0;
+      const len = getLength(el);
+      el.style.transition = 'none';
       el.style.strokeDasharray = `${len}`;
       el.style.strokeDashoffset = `${len}`;
       el.style.opacity = '0';
@@ -43,7 +67,7 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
     };
 
     const prepareShow = el => {
-      const len = el.getTotalLength?.() ?? 0;
+      const len = getLength(el);
       if (el.dataset.stroke) el.setAttribute('stroke', el.dataset.stroke);
       el.style.transition = 'none';
       el.style.opacity = '1';
@@ -51,49 +75,21 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
       el.style.strokeDashoffset = `${len}`;
     };
 
-    const tween = (from, to, duration, step) => {
-      if (duration <= 0) {
-        step(to);
-        return () => {};
-      }
-      const start = performance.now();
-      let raf = 0;
-      const tick = now => {
-        const t = Math.min(1, (now - start) / duration);
-        step(from + (to - from) * t);
-        if (t < 1) raf = requestAnimationFrame(tick);
-      };
-      raf = requestAnimationFrame(tick);
-      return () => cancelAnimationFrame(raf);
-    };
-
     const drawOnce = async el => {
-      if (el.__hideTimer) {
-        clearTimeout(el.__hideTimer);
-        el.__hideTimer = null;
-      }
-      if (el.__cancelDraw) {
-        el.__cancelDraw();
-        el.__cancelDraw = null;
-      }
-      if (el.__cancelFade) {
-        el.__cancelFade();
-        el.__cancelFade = null;
-      }
+      clearTimers(el);
 
       prepareShow(el);
 
-      const len = el.getTotalLength?.() ?? 0;
+      const len = getLength(el);
       const duration = SPEED_PX_S > 0 ? (len / SPEED_PX_S) * 1000 : DRAW_MS;
 
       await nextFrame();
 
       await new Promise(resolve => {
-        el.__cancelDraw = tween(len, 0, duration, v => {
-          el.style.strokeDashoffset = `${v}`;
-        });
-        setTimeout(() => {
-          el.__cancelDraw = null;
+        el.style.transition = `stroke-dashoffset ${duration}ms linear`;
+        el.style.strokeDashoffset = '0';
+        el.__drawTimer = setTimeout(() => {
+          el.__drawTimer = null;
           resolve();
         }, duration);
       });
@@ -106,11 +102,10 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
             el.__hideTimer = null;
             return;
           }
-          el.__cancelFade = tween(1, 0, fadeMs, v => {
-            el.style.opacity = String(v);
-          });
-          setTimeout(() => {
-            el.__cancelFade = null;
+          el.style.transition = `opacity ${fadeMs}ms ease`;
+          el.style.opacity = '0';
+          el.__fadeTimer = setTimeout(() => {
+            el.__fadeTimer = null;
             hardHide(el);
             el.__hideTimer = null;
           }, fadeMs);
@@ -135,18 +130,7 @@ export function useSvgPathSequencer(svgLike, order, timings = {}) {
     return () => {
       stopped = true;
       svgEl.querySelectorAll('[data-conn]').forEach(el => {
-        if (el.__hideTimer) {
-          clearTimeout(el.__hideTimer);
-          el.__hideTimer = null;
-        }
-        if (el.__cancelDraw) {
-          el.__cancelDraw();
-          el.__cancelDraw = null;
-        }
-        if (el.__cancelFade) {
-          el.__cancelFade();
-          el.__cancelFade = null;
-        }
+        clearTimers(el);
         hardHide(el);
       });
     };
