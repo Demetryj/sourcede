@@ -20,9 +20,11 @@
   gap: 8px;
 
   margin-bottom: 24px;
+  padding-left: 8px;
 
   @include tablet {
     margin-bottom: 32px;
+    padding-left: 24px;
   }
 
   @include largeTablet {
