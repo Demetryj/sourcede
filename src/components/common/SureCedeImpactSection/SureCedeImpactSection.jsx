@@ -1,6 +1,6 @@
 'use client';
 
-import { CountUpOnView, SnakeCard } from '@/components/common';
+import { CountUpOnView, AnimatedBorderBox } from '@/components/common';
 
 import './SureCedeImpactSection.scss';
 
@@ -31,13 +31,13 @@ export default function SureCedeImpactSection({ hash }) {
             })}
 
             <li className="">
-              <SnakeCard>
+              <AnimatedBorderBox>
                 <div className="scis__card-item">
                   <CountUpOnView to={100} suffix="%" additionalClass="" />
 
                   <p>Real-time placement updates for seamless operations.</p>
                 </div>
-              </SnakeCard>
+              </AnimatedBorderBox>
             </li>
           </ul>
         </div>

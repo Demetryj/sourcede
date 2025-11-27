@@ -2,20 +2,20 @@
 
 import clsx from 'clsx';
 
-import { BookDemoButton, SnakeCard } from '@/components/common';
+import { BookDemoButton, AnimatedBorderBox } from '@/components/common';
 
 import './BenefitCard.scss';
 
 export default function BenefitCard({ cardData: { icon: Icon, title, text, isAnimatedCard } }) {
   if (isAnimatedCard) {
     return (
-      <SnakeCard>
+      <AnimatedBorderBox>
         <div className={clsx('benefit-card', 'animated-card')}>
           <h5>{title}</h5>
 
           <BookDemoButton />
         </div>
-      </SnakeCard>
+      </AnimatedBorderBox>
     );
   }
   return (
