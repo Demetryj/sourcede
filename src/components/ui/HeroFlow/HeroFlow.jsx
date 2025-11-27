@@ -211,7 +211,11 @@ export default function HeroFlow() {
 
           <div
             className="heroFlow__stage"
-            style={{ width: '100%', maxWidth: scene.width, height: scene.height }}
+            style={{
+              width: '100%',
+              // maxWidth: scene.width,
+              height: scene.height,
+            }}
           >
             {/* BOTTOM SVG: perimeters under cards*/}
             <svg

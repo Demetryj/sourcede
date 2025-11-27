@@ -45,14 +45,11 @@
   bottom: -10px;
   pointer-events: none;
   opacity: 0.1;
-  // filter: blur(24px) saturate(120%) brightness(102%);
-  // filter: blur(18px) saturate(115%) brightness(102%);
+
   background-image: var(--white-gradient), var(--aurora);
-  // background-size: 300%, 200%;
+
   background-size: 220%, 150%;
-  // background-position:
-  //   50% 50%,
-  //   50% 50%;
+
   background-position:
     50% 50%,
     50% 50%;
@@ -64,35 +61,10 @@
   inset: 0;
   background-image: var(--aurora);
   background-size: 160%;
-  // background-position: 0% 50%;
+
   background-position: 50% 50%;
-  // opacity: 0.85;
+
   opacity: 0.6;
-  // animation: aurora-move 12s linear infinite alternate;
+
   animation: none;
 }
-
-// @keyframes aurora-move {
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   100% {
-//     background-position: 200% 50%;
-//   }
-// }
-
-// @media (max-width: 1023px) {
-//   .aurora-bg__layer {
-//     filter: blur(18px) saturate(115%) brightness(102%);
-//     background-size: 220%, 150%;
-//     background-position:
-//       50% 50%,
-//       50% 50%;
-//   }
-//
-//   .aurora-bg__layer::after {
-//     opacity: 0.6;
-//     animation: none;
-//     background-position: 50% 50%;
-//   }
-// }

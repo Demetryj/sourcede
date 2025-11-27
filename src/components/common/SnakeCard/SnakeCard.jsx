@@ -58,15 +58,15 @@ function SnakeCardFrame() {
         </linearGradient>
       </defs>
 
-      <rect className="snake-base" x="0.5" y="0" width="99.5" height="99.5" rx="0" ry="0" />
+      <rect className="snake-base" x="0" y="0" width="100" height="100" rx="0" ry="0" />
 
       <rect
         ref={runRef}
         className="snake-run"
-        x="0.5"
+        x="0"
         y="0.5"
-        width="99"
-        height="99"
+        width="100"
+        height="99.5"
         rx="0"
         ry="0"
       />
