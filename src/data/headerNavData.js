@@ -1,13 +1,13 @@
 export const headerNavMenuData = [
   { id: 1, title: 'Platform', value: 'platform', withIcon: true },
   { id: 2, title: 'About Us', value: 'about_us', withIcon: true },
-  {
-    id: 3,
-    title: 'Market Insights',
-    value: 'market_insights',
-    withIcon: false,
-    href: '/market-insights',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Market Insights',
+  //   value: 'market_insights',
+  //   withIcon: false,
+  //   href: '/market-insights',
+  // },
   { id: 4, title: 'Contact Us', value: 'contact_us', withIcon: false, href: '/contact-us' },
 ];
 
