@@ -32,7 +32,7 @@ export default function SubscriptionForm({ primary, id, footerForm }) {
   } = useForm({
     defaultValues: { email: '' },
     resolver: joiResolver(subscribeFormSchema),
-    mode: 'onTouched',
+    mode: 'onChange',
   });
 
   const onSubmit = async values => {
