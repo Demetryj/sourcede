@@ -18,9 +18,26 @@ import { Facebook, LinkedIn, X } from '@/components/icons/socialMedia';
 import './ArticlePage.scss';
 
 const socialMediaShareList = [
-  { name: 'facebook', icon: Facebook },
-  { name: 'linkedIn', icon: LinkedIn },
-  { name: 'x', icon: X },
+  {
+    name: 'facebook',
+    icon: Facebook,
+    buildShareUrl: ({ url }) =>
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+  },
+  {
+    name: 'linkedIn',
+    icon: LinkedIn,
+    buildShareUrl: ({ url }) =>
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+  },
+  {
+    name: 'x',
+    icon: X,
+    buildShareUrl: ({ url, title }) => {
+      const targetUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+      return title ? `${targetUrl}&text=${encodeURIComponent(title)}` : targetUrl;
+    },
+  },
 ];
 
 export default function ArticlePage({ articleId }) {
@@ -67,6 +84,15 @@ export default function ArticlePage({ articleId }) {
     );
 
   const { articleTitle, info, body } = data ?? {};
+
+  const handleShareClick = buildShareUrl => {
+    if (typeof window === 'undefined' || !buildShareUrl) return;
+
+    const shareUrl = buildShareUrl({ url: window.location.href, title: articleTitle });
+    if (!shareUrl) return;
+
+    window.open(shareUrl, '_blank', 'noopener,noreferrer');
+  };
 
   if (data)
     return (
@@ -119,12 +145,13 @@ export default function ArticlePage({ articleId }) {
                     <h6>Share article</h6>
 
                     <ul className="ap-article__info__share-block__list">
-                      {socialMediaShareList.map(({ name, icon: Icon }) => {
+                      {socialMediaShareList.map(({ name, icon: Icon, buildShareUrl }) => {
                         return (
                           <li key={name}>
                             <IconButton
                               icon={Icon}
                               additionalClass="ap-article__info__share-block__button"
+                              onClick={() => handleShareClick(buildShareUrl)}
                             />
                           </li>
                         );
