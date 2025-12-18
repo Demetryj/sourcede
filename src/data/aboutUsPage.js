@@ -48,6 +48,12 @@ export const advantagesCardListData = [
 
 export const teamListData = [
   {
+    name: 'Hamza Mir',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
+    image: '/images/team/hamza_mir.png',
+  },
+  {
     name: 'Andrew Johnson',
     position: 'Chief Executive Officer',
     linkToProfile: 'https://www.linkedin.com/',
@@ -79,6 +85,12 @@ export const teamListData = [
   },
   // duplication
   {
+    name: 'Hamza Mir',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
+    image: '/images/team/hamza_mir.png',
+  },
+  {
     name: 'Andrew Johnson',
     position: 'Chief Executive Officer',
     linkToProfile: 'https://www.linkedin.com/',
@@ -109,6 +121,12 @@ export const teamListData = [
     image: '/images/team//david_lee.png',
   },
 
+  {
+    name: 'Hamza Mir',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
+    image: '/images/team/hamza_mir.png',
+  },
   {
     name: 'Andrew Johnson',
     position: 'Chief Executive Officer',
