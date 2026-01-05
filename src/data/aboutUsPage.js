@@ -48,10 +48,22 @@ export const advantagesCardListData = [
 
 export const teamListData = [
   {
+    name: 'Shuja Noorani',
+    position: 'Chief Executive Officer',
+    linkToProfile: 'https://www.linkedin.com/in/shuja-noorani-44582a',
+    image: '/images/team/shuja_noorani.png',
+  },
+  {
     name: 'Hamza Mir',
     position: 'Chief Operating Officer',
     linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
     image: '/images/team/hamza_mir.png',
+  },
+  {
+    name: 'Mustaali Kushalgadhwala',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
+    image: '/images/team/mustaali_kushalgadhwala.png',
   },
   {
     name: 'Andrew Johnson',
@@ -85,10 +97,22 @@ export const teamListData = [
   },
   // duplication
   {
+    name: 'Shuja Noorani',
+    position: 'Chief Executive Officer',
+    linkToProfile: 'https://www.linkedin.com/in/shuja-noorani-44582a',
+    image: '/images/team/shuja_noorani.png',
+  },
+  {
     name: 'Hamza Mir',
     position: 'Chief Operating Officer',
     linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
     image: '/images/team/hamza_mir.png',
+  },
+  {
+    name: 'Mustaali Kushalgadhwala',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
+    image: '/images/team/mustaali_kushalgadhwala.png',
   },
   {
     name: 'Andrew Johnson',
@@ -122,10 +146,22 @@ export const teamListData = [
   },
 
   {
+    name: 'Shuja Noorani',
+    position: 'Chief Executive Officer',
+    linkToProfile: 'https://www.linkedin.com/in/shuja-noorani-44582a',
+    image: '/images/team/shuja_noorani.png',
+  },
+  {
     name: 'Hamza Mir',
     position: 'Chief Operating Officer',
     linkToProfile: 'https://www.linkedin.com/in/hamzamehrajmir',
     image: '/images/team/hamza_mir.png',
+  },
+  {
+    name: 'Mustaali Kushalgadhwala',
+    position: 'Chief Operating Officer',
+    linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
+    image: '/images/team/mustaali_kushalgadhwala.png',
   },
   {
     name: 'Andrew Johnson',

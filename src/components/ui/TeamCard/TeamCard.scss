@@ -42,6 +42,18 @@
   transition: $transition;
 }
 
+.team-card__name__wrapper h5 {
+  margin: 0;
+  min-height: calc(2 * 1.2em);
+
+  line-height: 1.2;
+}
+
+.team-card__name-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .team-card__position {
   color: $secondary-text;
 }
