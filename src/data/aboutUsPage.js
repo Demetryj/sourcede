@@ -61,7 +61,7 @@ export const teamListData = [
   },
   {
     name: 'Mustaali Kushalgadhwala',
-    position: 'Chief Operating Officer',
+    position: 'Chief Product Officer',
     linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
     image: '/images/team/mustaali_kushalgadhwala.png',
   },
@@ -110,7 +110,7 @@ export const teamListData = [
   },
   {
     name: 'Mustaali Kushalgadhwala',
-    position: 'Chief Operating Officer',
+    position: 'Chief Product Officer',
     linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
     image: '/images/team/mustaali_kushalgadhwala.png',
   },
@@ -159,7 +159,7 @@ export const teamListData = [
   },
   {
     name: 'Mustaali Kushalgadhwala',
-    position: 'Chief Operating Officer',
+    position: ' Chief Product Officer',
     linkToProfile: 'https://www.linkedin.com/in/mustaali-kushalgadhwala-6b2a1597',
     image: '/images/team/mustaali_kushalgadhwala.png',
   },
