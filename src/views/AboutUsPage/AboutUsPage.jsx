@@ -68,14 +68,8 @@ export default function AboutUsPage() {
               feature and workflow is designed to reflect real-world needs and support me.
             </p>
           </div>
-        </div>
 
-        <div
-          className="
-      
-        about-us__team-section__container"
-        >
-          <SliderCommon cardComponent={TeamCard} dataList={teamListData} />
+          <SliderCommon cardComponent={TeamCard} dataList={teamListData} withoutLoop />
         </div>
       </section>
 

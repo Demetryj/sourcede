@@ -21,6 +21,7 @@ export default function SliderCommon({
   isNeedPeek,
   peek,
   additionalClass,
+  withoutLoop,
 }) {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
@@ -41,11 +42,17 @@ export default function SliderCommon({
   }, [isNeedPeek]);
 
   return (
-    <div className={clsx('slider-common', additionalClass && additionalClass)}>
+    <div
+      className={clsx(
+        'slider-common',
+        withoutLoop && 'slider-common--team',
+        additionalClass && additionalClass
+      )}
+    >
       <Swiper
         modules={[Navigation, A11y, Keyboard]}
         onSwiper={swiper => (swiperRef.current = swiper)}
-        loop={true}
+        loop={withoutLoop ? false : true}
         slidesPerView="auto"
         spaceBetween={spaceBetween}
         speed={450}

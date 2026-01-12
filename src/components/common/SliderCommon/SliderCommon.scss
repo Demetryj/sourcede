@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.slider-common.slider-common--team .swiper {
+  padding-left: 0;
+}
+
 .slider-common__nav-wrapper {
   margin: 0 auto;
   padding-top: 24px;
@@ -30,6 +34,13 @@
     padding-left: 160px;
     padding-right: 160px;
   }
+}
+
+.slider-common.slider-common--team .slider-common__nav-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .slider-common__nav {
