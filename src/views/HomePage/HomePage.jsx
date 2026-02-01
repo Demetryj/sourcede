@@ -8,14 +8,19 @@ import {
   BenefitCardList,
   BookDemoButton,
 } from '@/components/common';
-import { CoverageCard, ResultsCard, HeroHomePageMobile, HeroFlow } from '@/components/ui';
+import {
+  CoverageCard,
+  // ResultsCard,
+  HeroHomePageMobile,
+  HeroFlow,
+} from '@/components/ui';
 
 import { useBreakpoint } from '@/hooks';
 
 import {
   coverageDataCardList,
   advantagesCardListData,
-  resultsCardListData,
+  // resultsCardListData,
 } from '@/data/homePageData';
 
 import './HomePage.scss';
@@ -46,7 +51,6 @@ export default function HomePage() {
     <>
       <HeroHomePageMobile />
       <HeroFlow />
-
       <SureCedeImpactSection />
       <section className="section-general coverage-section">
         <div className="container-general coverage-section__container">
@@ -80,10 +84,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <StreamlinedReinsuranceSection />
 
-      <section className="section-general home-page__results-section">
+      {/* Temporarily commented until real feedback is provided. */}
+      {/* <section className="section-general home-page__results-section">
         <div className="container-general">
           <h3>Real Results from Leading Cedants and Reinsurers</h3>
         </div>
@@ -94,10 +98,8 @@ export default function HomePage() {
           spaceBetween={16}
           width={isMobile ? '343px' : '540px'}
         />
-      </section>
-
+      </section> */}
       <FAQSection />
-
       <section className="home-page__bottom-section">
         <div className="container-general">
           <div className="inner-container-bottom inner-container-with-borders home-page__bottom-section__container">

@@ -1,0 +1,39 @@
+.book-demo-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.book-demo-button__tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px);
+  z-index: 999;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #111214;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(17, 18, 20, 0.2);
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  pointer-events: none;
+}
+
+@media (min-width: 1141px) {
+  .book-demo-button:hover .book-demo-button__tooltip {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.book-demo-button[data-tooltip-open='true'] .book-demo-button__tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
