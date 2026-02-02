@@ -65,7 +65,10 @@ export default function MobileMenu({ isMobileMenuOpen, closeMobileMenu }) {
           </SecondaryButton>
         </TemporaryTooltip>
 
-        <BookDemoButton additionalClass="mobile-menu__btn" />
+        {/* Tooltip added temporarily until there is a link to the Platform */}
+        <TemporaryTooltip fullWidth>
+          <BookDemoButton additionalClass="mobile-menu__btn" />
+        </TemporaryTooltip>
       </div>
     </div>
   );
