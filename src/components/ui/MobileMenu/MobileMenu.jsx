@@ -13,6 +13,8 @@ import {
 
 import './MobileMenu.scss';
 
+import TemporaryTooltip from '@/components/common/TemporaryTooltip/TemporaryTooltip';
+
 export default function MobileMenu({ isMobileMenuOpen, closeMobileMenu }) {
   return (
     <div className={clsx('mobile-menu', isMobileMenuOpen && 'menu-open')}>
@@ -53,9 +55,15 @@ export default function MobileMenu({ isMobileMenuOpen, closeMobileMenu }) {
       </ul>
 
       <div className="mobile-menu__btn-wrapper">
-        <SecondaryButton href={''} additionalClass="mobile-menu__btn">
-          Log In
-        </SecondaryButton>
+        <TemporaryTooltip fullWidth>
+          {/* Tooltip added temporarily until there is a link to the Platform */}
+          <SecondaryButton
+            // href={''}
+            additionalClass="mobile-menu__btn"
+          >
+            Log In
+          </SecondaryButton>
+        </TemporaryTooltip>
 
         <BookDemoButton additionalClass="mobile-menu__btn" />
       </div>

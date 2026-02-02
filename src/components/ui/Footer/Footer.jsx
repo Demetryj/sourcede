@@ -11,6 +11,8 @@ import {
 
 import './Footer.scss';
 
+import TemporaryTooltip from '@/components/common/TemporaryTooltip/TemporaryTooltip';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -39,6 +41,19 @@ export default function Footer() {
 
                 <ul className="footer__nav-list">
                   {productNavDataFooter.map(({ title, linkTo }, index) => {
+                    // Tooltip added temporarily until there is a link to the Platform
+                    if (title === 'Log In' || title === 'Book a Demo') {
+                      return (
+                        <li key={index}>
+                          <TemporaryTooltip>
+                            <div className="footer__nav-link" style={{ cursor: 'pointer' }}>
+                              {title}
+                            </div>
+                          </TemporaryTooltip>
+                        </li>
+                      );
+                    }
+
                     return (
                       <li key={index}>
                         <Link href={linkTo} className="footer__nav-link">

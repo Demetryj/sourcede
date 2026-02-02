@@ -14,6 +14,8 @@ import { BurgerMenu } from '@/components/icons';
 
 import './Header.scss';
 
+import TemporaryTooltip from '@/components/common/TemporaryTooltip/TemporaryTooltip';
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { screenWidth } = useBreakpoint();
@@ -56,7 +58,16 @@ export default function Header() {
 
         <div className="header__wrapper">
           <HeaderNavMenu />
-          <SecondaryButton href={''}>Log In</SecondaryButton>
+
+          {/* Tooltip added temporarily until there is a link to the Platform */}
+          <TemporaryTooltip>
+            <SecondaryButton
+            // href={''}
+            >
+              Log In
+            </SecondaryButton>
+          </TemporaryTooltip>
+
           <BookDemoButton />
         </div>
 
