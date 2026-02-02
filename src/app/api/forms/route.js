@@ -29,7 +29,7 @@ export async function POST(request) {
       { ok: response.ok && json?.ok, status: response.status, data: json },
       { status: response.status }
     );
-  } catch (error) {
+  } catch {
     return Response.json({ ok: false, error: 'Upstream request failed' }, { status: 500 });
   }
 }
