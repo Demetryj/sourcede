@@ -8,6 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'sass')],
+    loadPaths: [path.join(__dirname, 'src', 'sass')],
     additionalData: `@use "tokens" as *;`,
   },
 };

@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -14,7 +14,7 @@
     "clsx": "^2.1.1",
     "joi": "^18.0.1",
     "modern-normalize": "^3.0.1",
-    "next": "15.5.5",
+    "next": "^16.1.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-hook-form": "^7.65.0",
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@types/node": "24.7.2",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "15.5.5",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
