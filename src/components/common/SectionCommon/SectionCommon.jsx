@@ -17,7 +17,7 @@ export default function SectionCommon({ bgImage, title, subtitle, withButton, ha
 
                 <p className="section-common__subtitle">{subtitle}</p>
 
-                {withButton && <BookDemoButton />}
+                {withButton && <BookDemoButton positionTop />}
 
                 {children && children}
               </div>

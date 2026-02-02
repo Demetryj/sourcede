@@ -6,7 +6,7 @@ import { useBreakpoint } from '@/hooks';
 
 import './TemporaryTooltip.scss';
 
-export default function TemporaryTooltip({ children, fullWidth }) {
+export default function TemporaryTooltip({ children, fullWidth, positionTop }) {
   const { screenWidth } = useBreakpoint();
   const [isTooltipOpen, setIsTooltipOpen] = useState(false);
   const isClickTooltip = screenWidth > 0 && screenWidth <= 1140;
@@ -55,11 +55,18 @@ export default function TemporaryTooltip({ children, fullWidth }) {
       data-tooltip-open={isTooltipOpen || undefined}
       ref={containerRef}
       onClick={handleClick}
-      style={{ width: fullWidth ? '100%' : 'fit-content' }}
+      style={{
+        width: fullWidth ? '100%' : 'fit-content',
+      }}
     >
       {children}
 
-      <span className="book-demo-button__tooltip" role="status" aria-live="polite">
+      <span
+        className="book-demo-button__tooltip"
+        role="status"
+        aria-live="polite"
+        style={{ top: positionTop ? 'calc(-100% + 6px)' : ' calc(100% + 6px)' }}
+      >
         Coming soon
       </span>
     </div>
