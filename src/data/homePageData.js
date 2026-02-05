@@ -22,15 +22,9 @@ import { SilverOakLogo, NovaRELogo, ApexRiskLogo } from '@/components/icons/comp
 
 export const coverageDataCardList = [
   {
-    title: 'Financial Lines',
-    bage1: 'D&O',
-    bage2: 'PI',
-    image: '/images/coverage/financial-lines.webp',
-  },
-  {
     title: 'Energy',
-    bage1: 'Downstream',
-    bage2: 'PI',
+    bage1: 'Upstream',
+    bage2: 'Downstream',
     image: '/images/coverage/energy.webp',
   },
   {
@@ -102,15 +96,9 @@ export const coverageDataCardList = [
   //duplicate
 
   {
-    title: 'Financial Lines',
-    bage1: 'D&O',
-    bage2: 'PI',
-    image: '/images/coverage/financial-lines.webp',
-  },
-  {
     title: 'Energy',
-    bage1: 'Downstream',
-    bage2: 'PI',
+    bage1: 'Upstream',
+    bage2: 'Downstream',
     image: '/images/coverage/energy.webp',
   },
   {
